@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5933173778843721225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Impacts/Boom_Steam
+  m_EditorClassIdentifier: 
+  Path: event:/Impacts/Boom_Steam
+  Guid:
+    Data1: -1849333638
+    Data2: 1121343016
+    Data3: -1783468922
+    Data4: 511157546
+  Banks:
+  - {fileID: 4250959142665897433}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1202
 --- !u!114 &-3552836787672052763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,12 +42,12 @@ MonoBehaviour:
   Path: ../../FMOD Studio/spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638367174899239695
+  lastModified: 638367244517696845
   FileSizes:
   - Name: Desktop
-    Value: 758
+    Value: 856
   - Name: Mobile
-    Value: 758
+    Value: 856
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -38,15 +65,17 @@ MonoBehaviour:
   - {fileID: -3552836787672052763}
   - {fileID: 4250959142665897433}
   EditorEvents:
-  - {fileID: 1221863224048765241}
+  - {fileID: -5933173778843721225}
+  - {fileID: 3927775866821964369}
+  - {fileID: 3491255142867715852}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4250959142665897433}
   StringsBanks:
   - {fileID: -3552836787672052763}
-  cacheTime: 638367174899239695
+  cacheTime: 638367244517696845
   cacheVersion: 131609
---- !u!114 &1221863224048765241
+--- !u!114 &3491255142867715852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,23 +85,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Vine Boom
+  m_Name: event:/Impacts/Boom_Resonance
   m_EditorClassIdentifier: 
-  Path: event:/Vine Boom
+  Path: event:/Impacts/Boom_Resonance
   Guid:
-    Data1: 877091798
-    Data2: 1108342850
-    Data3: 753680541
-    Data4: -1083360784
+    Data1: 144072131
+    Data2: 1151230565
+    Data3: -994812776
+    Data4: 968571582
   Banks:
   - {fileID: 4250959142665897433}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 1202
+--- !u!114 &3927775866821964369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Impacts/Boom_Oculus
+  m_EditorClassIdentifier: 
+  Path: event:/Impacts/Boom_Oculus
+  Guid:
+    Data1: -1713055065
+    Data2: 1163750594
+    Data3: -1325557071
+    Data4: 2067000692
+  Banks:
+  - {fileID: 4250959142665897433}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1202
 --- !u!114 &4250959142665897433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,10 +144,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638367174899229615
+  lastModified: 638367244517686822
   FileSizes:
   - Name: Desktop
-    Value: 13600
+    Value: 15680
   - Name: Mobile
-    Value: 37504
+    Value: 39776
   Exists: 1

@@ -119,6 +119,8 @@ MonoBehaviour:
     Plugins:
       Value:
       - phonon_fmod
+      - OculusSpatializerFMOD
+      - resonanceaudio
       HasValue: 1
     StaticPlugins:
       Value: []
