@@ -111,6 +111,7 @@ Library: C:\Users\IXLAB\Documents\GitHub\spatializer-evaluation\Temp\StagingArea
 --compilation-defines=ENABLE_INPUT_SYSTEM
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
 --compilation-defines=TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+--compilation-defines=STEAMAUDIO_ENABLED
 --compilation-defines=NORMCORE
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
