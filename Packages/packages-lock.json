@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.ixlab.alignment": {
+      "version": "https://dev.ixlab.inf.tu-dresden.de/lab/multiuservrfoundations/viewr_core.git?path=/Assets/ViewR/Core/Calibration",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.4.4",
+        "com.unity.textmeshpro": "3.0.6"
+      },
+      "hash": "6c91f324a4f8babb0785bc56685e2f9da8acf630"
+    },
     "com.normalvr.normcore": {
       "version": "2.6.1",
       "depth": 0,
