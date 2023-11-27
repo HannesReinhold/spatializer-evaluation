@@ -362,8 +362,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../FMOD Studio/spatializer-evaluation/spatializer-evaluation.fspro
-  sourceBankPath: ../../FMOD Studio/spatializer-evaluation/Build
+  sourceProjectPath: spatializer-evaluation/spatializer-evaluation.fspro
+  sourceBankPath: spatializer-evaluation/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
