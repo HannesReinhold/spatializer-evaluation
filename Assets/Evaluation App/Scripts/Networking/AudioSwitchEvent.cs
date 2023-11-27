@@ -10,14 +10,14 @@ public class AudioSwitchEvent : RealtimeComponent<AudioSwitchEventModel>
     private AudioSource audioSource;
 
     [SerializeField]
-    // TODO add channel switcher
+    private AudioOutputChannelRouter outputChannelRouter;
 
     private bool isVR;
 
     void Start()
     {
         audioSource = FindAnyObjectByType<AudioSource>();
-        //channelSplitter = audioSource.GetComponent<ChannelSplitter>();
+        outputChannelRouter = audioSource.GetComponent<AudioOutputChannelRouter>();
         //isVR = FindAnyObjectByType<GameManager>().IsVR;
     }
 
@@ -45,7 +45,7 @@ public class AudioSwitchEvent : RealtimeComponent<AudioSwitchEventModel>
     // Called whenever our event fires
     private void SettingsSet(int speakerID, int realAudio)
     {
-        //if (channelSplitter != null) channelSplitter.selectedChannel = speakerID;
+        if (outputChannelRouter != null) outputChannelRouter.SetOutputChannel(speakerID);
 
         if (isVR)
             audioSource.volume = realAudio != 0 ? 0 : 1;
@@ -53,9 +53,9 @@ public class AudioSwitchEvent : RealtimeComponent<AudioSwitchEventModel>
             audioSource.volume = realAudio != 0 ? 1 : 0;
 
         if (realAudio == 0)
-            Debug.Log("Play virtual audio ");
+            Debug.Log("Playing virtual audio");
         else
-            Debug.Log("Play real speaker at index " + speakerID);
+            Debug.Log("Playing real speaker at index " + speakerID);
     }
 
 }
