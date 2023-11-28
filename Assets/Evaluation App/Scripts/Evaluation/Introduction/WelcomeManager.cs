@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainIntroductionManager : MonoBehaviour
+public class WelcomeManager : MonoBehaviour
 {
-    public void StartIntroduction()
+   public void StartIntroduction()
     {
 
     }
-
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: -1783468922
     Data4: 511157546
   Banks:
-  - {fileID: 4250959142665897433}
+  - {fileID: 3001012958590905968}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -27,7 +27,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
---- !u!114 &-3552836787672052763
+--- !u!114 &-4560415425514819377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Menu_Open
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Menu_Open
+  Guid:
+    Data1: 1530672083
+    Data2: 1260404506
+    Data3: 688436626
+    Data4: -2087950000
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1462
+--- !u!114 &-2529225735114066685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,15 +66,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/spatializer-evaluation/Build/Desktop/Master.strings.bank
+  Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638367244517696845
+  lastModified: 638367470575708618
   FileSizes:
   - Name: Desktop
-    Value: 856
+    Value: 912
   - Name: Mobile
-    Value: 856
+    Value: 912
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -62,19 +89,42 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3552836787672052763}
-  - {fileID: 4250959142665897433}
+  - {fileID: -2529225735114066685}
+  - {fileID: 3001012958590905968}
   EditorEvents:
   - {fileID: -5933173778843721225}
   - {fileID: 3927775866821964369}
   - {fileID: 3491255142867715852}
+  - {fileID: -4560415425514819377}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4250959142665897433}
+  - {fileID: 3001012958590905968}
   StringsBanks:
-  - {fileID: -3552836787672052763}
-  cacheTime: 638367244517696845
+  - {fileID: -2529225735114066685}
+  cacheTime: 638367470575708618
   cacheVersion: 131609
+--- !u!114 &3001012958590905968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: spatializer-evaluation/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638367470575698617
+  FileSizes:
+  - Name: Desktop
+    Value: 31712
+  - Name: Mobile
+    Value: 79712
+  Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +144,7 @@ MonoBehaviour:
     Data3: -994812776
     Data4: 968571582
   Banks:
-  - {fileID: 4250959142665897433}
+  - {fileID: 3001012958590905968}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -121,7 +171,7 @@ MonoBehaviour:
     Data3: -1325557071
     Data4: 2067000692
   Banks:
-  - {fileID: 4250959142665897433}
+  - {fileID: 3001012958590905968}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -129,25 +179,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
---- !u!114 &4250959142665897433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/spatializer-evaluation/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638367244517686822
-  FileSizes:
-  - Name: Desktop
-    Value: 15680
-  - Name: Mobile
-    Value: 39776
-  Exists: 1
