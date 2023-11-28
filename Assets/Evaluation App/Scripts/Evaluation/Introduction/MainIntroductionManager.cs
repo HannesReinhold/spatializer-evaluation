@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MainIntroductionManager : MonoBehaviour
 {
-    public void StartIntroduction()
+    public void StartSubjectiveEvaluation()
     {
-
+        GameManager.Instance.StartSubjectiveEvaluation();
     }
 
 }
