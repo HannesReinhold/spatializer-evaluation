@@ -11,7 +11,7 @@ public class VolumeSettings : MonoBehaviour
 
     private void Awake()
     {
-        bus = FMODUnity.RuntimeManager.GetBus("bus:/");
+        bus = FMODUnity.RuntimeManager.GetBus("bus:/MainSounds");
     }
     private void Update()
     {
