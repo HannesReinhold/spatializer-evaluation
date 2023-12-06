@@ -53,7 +53,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1462
+  Length: 1850
 --- !u!114 &-2529225735114066685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,13 +69,67 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638367470575708618
+  lastModified: 638374296828521426
   FileSizes:
   - Name: Desktop
-    Value: 912
+    Value: 1180
   - Name: Mobile
-    Value: 912
+    Value: 1180
   Exists: 1
+--- !u!114 &-1913494650824637462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Submit
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Submit
+  Guid:
+    Data1: 59912602
+    Data2: 1148872141
+    Data3: -456191602
+    Data4: -216614390
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
+--- !u!114 &-1196017480169648339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/BtnClick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/BtnClick
+  Guid:
+    Data1: 401902573
+    Data2: 1244211059
+    Data3: 1216707743
+    Data4: -873777871
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,13 +150,46 @@ MonoBehaviour:
   - {fileID: 3927775866821964369}
   - {fileID: 3491255142867715852}
   - {fileID: -4560415425514819377}
+  - {fileID: 6175650532950628365}
+  - {fileID: 7107621948793415509}
+  - {fileID: -1913494650824637462}
+  - {fileID: -1196017480169648339}
+  - {fileID: 7742001163579238530}
+  - {fileID: 1345801562066976928}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638367470575708618
+  cacheTime: 638374296828521426
   cacheVersion: 131609
+--- !u!114 &1345801562066976928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Ambient1
+  Guid:
+    Data1: -1696342304
+    Data2: 1186266839
+    Data3: 978256275
+    Data4: 780419854
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 154488
 --- !u!114 &3001012958590905968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,12 +205,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638367470575698617
+  lastModified: 638374296828511438
   FileSizes:
   - Name: Desktop
-    Value: 31712
+    Value: 2013504
   - Name: Mobile
-    Value: 79712
+    Value: 4410048
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -179,3 +266,84 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &6175650532950628365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/VolumeSetting
+  m_EditorClassIdentifier: 
+  Path: event:/UI/VolumeSetting
+  Guid:
+    Data1: -245392618
+    Data2: 1233681416
+    Data3: -406094935
+    Data4: 1856127950
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &7107621948793415509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Select
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Select
+  Guid:
+    Data1: -310857892
+    Data2: 1302778900
+    Data3: 1186670004
+    Data4: -1261240938
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
+--- !u!114 &7742001163579238530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/WindowOpen
+  m_EditorClassIdentifier: 
+  Path: event:/UI/WindowOpen
+  Guid:
+    Data1: 547857512
+    Data2: 1117569117
+    Data3: -1700498047
+    Data4: 683093544
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
