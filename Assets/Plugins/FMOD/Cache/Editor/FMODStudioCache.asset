@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7116889763374754768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/MovingSource1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/MovingSource1
+  Guid:
+    Data1: -392050162
+    Data2: 1141969772
+    Data3: 654910601
+    Data4: -1848026047
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7000
 --- !u!114 &-5933173778843721225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,12 +96,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638374348868981642
+  lastModified: 638375657566609970
   FileSizes:
   - Name: Desktop
-    Value: 1294
+    Value: 1350
   - Name: Mobile
-    Value: 1294
+    Value: 1350
   Exists: 1
 --- !u!114 &-1913494650824637462
 MonoBehaviour:
@@ -156,12 +183,13 @@ MonoBehaviour:
   - {fileID: -1196017480169648339}
   - {fileID: 7742001163579238530}
   - {fileID: 1345801562066976928}
+  - {fileID: -7116889763374754768}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638374348868981642
+  cacheTime: 638375657566609970
   cacheVersion: 131609
 --- !u!114 &1345801562066976928
 MonoBehaviour:
@@ -205,12 +233,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638374348868951711
+  lastModified: 638375657566589979
   FileSizes:
   - Name: Desktop
-    Value: 2013952
+    Value: 2114560
   - Name: Mobile
-    Value: 4410496
+    Value: 4949568
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -292,7 +320,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 7480
 --- !u!114 &7107621948793415509
 MonoBehaviour:
   m_ObjectHideFlags: 0
