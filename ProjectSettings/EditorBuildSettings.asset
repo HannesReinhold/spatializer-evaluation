@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DirectionGuessing.unity
     guid: 639d9c3ecb493e648b162f468f2f787e
+  - enabled: 0
+    path: Assets/Scenes/GUI Test.unity
+    guid: 9ae5bbf7e0a493d4b8566fae6395437f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 54dbb8ac8f4796e4c9fb04ac3b86c2c8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d70db575b4c5e2b4e95f78b22462e719, type: 2}

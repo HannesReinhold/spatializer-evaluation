@@ -24,9 +24,9 @@ public static class GUIAudioManager
         FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Submit", pos);
     }
 
-    public static void PlayMenuStart(Vector3 pos)
+    public static void PlaySelect(Vector3 pos)
     {
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Select", pos);
     }
 
 

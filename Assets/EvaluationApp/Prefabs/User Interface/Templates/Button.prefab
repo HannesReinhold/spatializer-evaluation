@@ -144,7 +144,7 @@ MonoBehaviour:
       Data3: 1216707743
       Data4: -873777871
     Path: event:/UI/BtnClick
-  clickVibration: 0.1
+  clickVibration: 0.02
   playEnterSound: 0
   enterSound:
     Guid:
@@ -162,7 +162,7 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  exitVibration: 0.1
+  exitVibration: 0.02
 --- !u!1 &4801289237155153382
 GameObject:
   m_ObjectHideFlags: 0
