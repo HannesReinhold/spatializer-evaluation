@@ -67,10 +67,12 @@ public class GameManager : MonoBehaviour
     public void StartSubjectiveEvaluation()
     {
         if (subjectiveObject == null) subjectiveObject = Instantiate(SubjectiveEvaluationPrefab);
+        if (introductionObject != null) introductionObject.SetActive(false);
     }
 
     public void StartDirectionGuessing()
     {
         if(directionGuessingObject == null) directionGuessingObject = Instantiate(DirectionGuessingPrefab);
+        if(introductionObject != null) introductionObject.SetActive(false);
     }
 }

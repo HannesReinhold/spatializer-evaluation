@@ -190,7 +190,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &65284395 stripped
 Transform:
@@ -662,7 +662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1164,7 +1164,6 @@ Transform:
   m_Children:
   - {fileID: 705507995}
   - {fileID: 1082832602}
-  - {fileID: 1789470129}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1591,7 +1590,7 @@ PrefabInstance:
     - target: {fileID: 6289235721194758544, guid: 207e564fe94ccd0488ccbad0cf3047e0, type: 3}
       propertyPath: DirectionGuessingPrefab
       value: 
-      objectReference: {fileID: 2760024269874488961, guid: 276b4d053e370bb4a92403e71008c0f1, type: 3}
+      objectReference: {fileID: 6144732440289953933, guid: 85b0ca7769e79b049803fa33f5801e97, type: 3}
     - target: {fileID: 6289235721194758544, guid: 207e564fe94ccd0488ccbad0cf3047e0, type: 3}
       propertyPath: SubjectiveEvaluationPrefab
       value: 
@@ -1669,8 +1668,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 70194622}
-  m_Father: {fileID: 1204626347}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1808408217
 PrefabInstance:
@@ -1887,5 +1886,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

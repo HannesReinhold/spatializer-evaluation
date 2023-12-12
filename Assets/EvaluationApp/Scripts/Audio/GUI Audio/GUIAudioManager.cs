@@ -29,5 +29,10 @@ public static class GUIAudioManager
         FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Select", pos);
     }
 
+    public static void SetAmbientVolume(float v)
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientVolume",v);
+    }
+
 
 }
