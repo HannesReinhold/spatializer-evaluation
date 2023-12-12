@@ -7,18 +7,23 @@ public class AngleTest : MonoBehaviour
 
     public Transform origin;
     public Transform target;
+    public Transform rotTrans;
 
     public LineRenderer lineActual;
     public LineRenderer lineCalc;
 
     public float a = 0;
     public float e = 0;
+
+    public Vector3 rot;
     
 
     
     void Update()
     {
         Calc2();
+        rotTrans.rotation = origin.rotation;
+        rotTrans.Rotate(new Vector3(a, e, 0), Space.Self);
     }
 
 
@@ -57,19 +62,27 @@ public class AngleTest : MonoBehaviour
 
     void Calc2()
     {
-        Vector3 guessedDirection = origin.forward;
-        Vector3 actualDirection = (target.position - origin.position);
+        // use this if rotate
+        Quaternion look = Quaternion.FromToRotation(origin.forward, (target.position-origin.position).normalized);
+        Vector3 d2 = look.eulerAngles;
 
-        Vector3 dirProjAz = Vector3.ProjectOnPlane(actualDirection,origin.up);
-        Vector3 dirProjEl = Vector3.ProjectOnPlane(actualDirection, origin.right);
+        // use these as relative difference
+        Quaternion dif = Quaternion.LookRotation(origin.InverseTransformPoint(target.position), Vector3.up);
 
-        Vector3 gueProjAz = Vector3.ProjectOnPlane(guessedDirection, origin.up);
-        Vector3 gueProjEl = Vector3.ProjectOnPlane(guessedDirection, origin.right);
 
-        float azimuth = Vector2.SignedAngle(new Vector2(gueProjAz.x,gueProjAz.z), new Vector2(dirProjAz.x,dirProjAz.z));
-        float elevation = Vector2.SignedAngle(new Vector2(gueProjEl.y, gueProjEl.z), new Vector2(dirProjEl.y, dirProjEl.z));
+        Vector3 calcVec = look * origin.forward;
 
-        Debug.Log(azimuth+", "+elevation);
+        lineCalc.SetColors(Color.red, Color.red);
+        lineCalc.positionCount = 2;
+        lineCalc.SetPosition(0, origin.position);
+        lineCalc.SetPosition(1, origin.TransformPoint(origin.InverseTransformPoint(target.position)));
+
+        lineActual.SetColors(Color.red, Color.green);
+        lineActual.positionCount = 2;
+        lineActual.SetPosition(0, origin.position);
+        lineActual.SetPosition(1, origin.position+calcVec);
+
+        Debug.Log(dif.eulerAngles);
 
     }
 }
