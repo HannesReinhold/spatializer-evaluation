@@ -52,12 +52,12 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
         //evaluationData = new SubjectiveEvaluationData(index,"","","");
         //evaluationData.spatializerName = evaluationManager.Evaluations[index].spatializerName;
         //evaluationData.evaluationAspect = evaluationManager.Evaluations[index].evaluationAspect;
-        GameManager.Instance.dataManager.currentSessionData.subjectiveEvaluationResults.Add(evaluationData);
+        //GameManager.Instance.dataManager.currentSessionData.subjectiveEvaluationResults.Add(evaluationData);
     }
 
     public void SaveEvaluationData()
     {
-        GameManager.Instance.dataManager.SaveSession();
+        //GameManager.Instance.dataManager.SaveSession();
     }
 
     public void OnSliderChanged(float value)
@@ -78,7 +78,7 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
         
         evaluationManager.SetEvaluationMenuState(0);
         evaluationManager.SetNextEvaluation();
-        SetInterface(evaluationManager.evaluationData);
+        //SetInterface(evaluationManager.evaluationData);
         slider.value = 50;
 
     }

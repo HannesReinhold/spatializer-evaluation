@@ -9,6 +9,7 @@ public class SessionData
     public string id;
     public Gender gender;
     public int age;
+    public float volume;
 
     public List<SubjectiveEvaluationData> subjectiveEvaluationResults;
     public List<DirectionGuessingData> directionGuessingResults;

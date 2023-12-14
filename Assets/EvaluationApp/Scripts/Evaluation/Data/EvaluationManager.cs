@@ -8,7 +8,7 @@ public class EvaluationManager : MonoBehaviour
 {
     public List<GameObject> MenuPages;
 
-    public SubjectiveStartDialog Dialog;
+    //public SubjectiveStartDialog Dialog;
     public SubjectiveEvaluationInterface1 EvaluationInterface;
 
     public int currentEvaluationIndex = 0;
@@ -17,7 +17,7 @@ public class EvaluationManager : MonoBehaviour
 
 
 
-    public SpatializerSwitcher spatializerSwitcher;
+    //public SpatializerSwitcher spatializerSwitcher;
 
     private void Awake()
     {
@@ -32,12 +32,12 @@ public class EvaluationManager : MonoBehaviour
 
     public void EnableAudioSource(bool enable)
     {
-        spatializerSwitcher.gameObject.SetActive(enable);
+        //spatializerSwitcher.gameObject.SetActive(enable);
     }
 
 
-    public Loudspeaker Speaker1;
-    public Loudspeaker Speaker2;
+    //public Loudspeaker Speaker1;
+    //public Loudspeaker Speaker2;
 
     ToggleGroup toggle;
 
@@ -52,23 +52,23 @@ public class EvaluationManager : MonoBehaviour
 
     public void StartSpeakers(int i)
     {
-        Speaker1.SetActive(true);
-        Speaker1.SetSpatializer(6);
-        Speaker2.SetActive(true);
-        Speaker2.SetSpatializer(i);
+        //Speaker1.SetActive(true);
+        //Speaker1.SetSpatializer(6);
+        //Speaker2.SetActive(true);
+        //Speaker2.SetSpatializer(i);
     }
     public void StopSpeakers()
     {
-        Speaker1.SetActive(false);
-        Speaker2.SetActive(false);
+        //Speaker1.SetActive(false);
+        //Speaker2.SetActive(false);
     }
 
     public void SwitchDirect(float vol)
     {
-        AudioSource audioEvent1 = Speaker1.switcher.UnitySource.GetComponent<AudioSource>();
-        audioEvent1.volume = (1f - vol / 100f);
-        FMODUnity.StudioEventEmitter audioEvent2 = Speaker2.GetActiveEmitter();
-        audioEvent2.EventInstance.setVolume(vol / 100f);
+        //AudioSource audioEvent1 = Speaker1.switcher.UnitySource.GetComponent<AudioSource>();
+        //audioEvent1.volume = (1f - vol / 100f);
+        //FMODUnity.StudioEventEmitter audioEvent2 = Speaker2.GetActiveEmitter();
+        //audioEvent2.EventInstance.setVolume(vol / 100f);
     }
 
 
@@ -95,14 +95,14 @@ public class EvaluationManager : MonoBehaviour
                 StopSpeakers();
                 break;
         }
-        spatializerSwitcher.SetSource(evaluationData.);
+        //spatializerSwitcher.SetSource(evaluationData.);
     }
 
     public void SetupEvaluation()
     {
         //evaluationData = Evaluations[currentEvaluationIndex];
-        Dialog.SetHeader(evaluationData);
-        EvaluationInterface.SetInterface(evaluationData);
+        //Dialog.SetHeader(evaluationData);
+        //EvaluationInterface.SetInterface(evaluationData);
         EvaluationInterface.SetEvaluationData(currentEvaluationIndex);
 
         //spatializerSwitcher.SetSource(Evaluations[currentEvaluationIndex].spatializerID);
@@ -112,8 +112,8 @@ public class EvaluationManager : MonoBehaviour
     {
         currentEvaluationIndex++;
         //evaluationData = Evaluations[currentEvaluationIndex];
-        Dialog.SetHeader(evaluationData);
-        EvaluationInterface.SetInterface(evaluationData);
+        //Dialog.SetHeader(evaluationData);
+        //EvaluationInterface.SetInterface(evaluationData);
         EvaluationInterface.SetEvaluationData(currentEvaluationIndex);
     }
 }
