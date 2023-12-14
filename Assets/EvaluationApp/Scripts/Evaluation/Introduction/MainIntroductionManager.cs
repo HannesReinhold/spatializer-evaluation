@@ -12,6 +12,11 @@ public class MainIntroductionManager : MonoBehaviour
         GameManager.Instance.StartSubjectiveEvaluation();
     }
 
+    public void StartDirectionGuessingGame()
+    {
+        GameManager.Instance.StartDirectionGuessing();
+    }
+
 
 
     public void StartEvent(int i)

@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7000
+--- !u!114 &-6743448808223742899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbientVolume
+  m_EditorClassIdentifier: 
+  Name: AmbientVolume
+  StudioPath: parameter:/AmbientVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1574726754
+    data2: 3378259294
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5933173778843721225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,12 +120,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638375657566609970
+  lastModified: 638379979092862775
   FileSizes:
   - Name: Desktop
-    Value: 1350
+    Value: 1442
   - Name: Mobile
-    Value: 1350
+    Value: 1442
   Exists: 1
 --- !u!114 &-1913494650824637462
 MonoBehaviour:
@@ -184,12 +208,14 @@ MonoBehaviour:
   - {fileID: 7742001163579238530}
   - {fileID: 1345801562066976928}
   - {fileID: -7116889763374754768}
-  EditorParameters: []
+  - {fileID: 5011004730782197860}
+  EditorParameters:
+  - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638375657566609970
+  cacheTime: 638379979092862775
   cacheVersion: 131609
 --- !u!114 &1345801562066976928
 MonoBehaviour:
@@ -233,12 +259,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638375657566589979
+  lastModified: 638379979092852825
   FileSizes:
   - Name: Desktop
-    Value: 2114560
+    Value: 2130528
   - Name: Mobile
-    Value: 4949568
+    Value: 4982624
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -294,6 +320,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &5011004730782197860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Gunshot
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Gunshot
+  Guid:
+    Data1: 827546476
+    Data2: 1232223636
+    Data3: -137623112
+    Data4: -1658911185
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1125
 --- !u!114 &6175650532950628365
 MonoBehaviour:
   m_ObjectHideFlags: 0

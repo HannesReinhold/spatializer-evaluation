@@ -9841,7 +9841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828797902768140808, guid: 3c172ea46150d6c4c9c07eeafac2b6ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartSubjectiveEvaluation
+      value: StartDirectionGuessingGame
       objectReference: {fileID: 0}
     - target: {fileID: 828797902768140808, guid: 3c172ea46150d6c4c9c07eeafac2b6ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

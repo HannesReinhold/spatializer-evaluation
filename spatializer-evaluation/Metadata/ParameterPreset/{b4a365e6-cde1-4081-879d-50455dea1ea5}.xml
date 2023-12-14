@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b4a365e6-cde1-4081-879d-50455dea1ea5}">
+		<property name="name">
+			<value>AmbientVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{64c8e360-3b12-47ea-bdee-8eed8054e647}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7088746d-bd96-4c11-b444-66f909b8ca16}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7088746d-bd96-4c11-b444-66f909b8ca16}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.97999995946884155</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
