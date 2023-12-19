@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7629204187733085580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Noise
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Noise
+  Guid:
+    Data1: 2051473006
+    Data2: 1324226383
+    Data3: -660263543
+    Data4: 1917625673
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &-7116889763374754768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,12 +147,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638379979092862775
+  lastModified: 638381694441486576
   FileSizes:
   - Name: Desktop
-    Value: 1442
+    Value: 1478
   - Name: Mobile
-    Value: 1442
+    Value: 1478
   Exists: 1
 --- !u!114 &-1913494650824637462
 MonoBehaviour:
@@ -209,13 +236,14 @@ MonoBehaviour:
   - {fileID: 1345801562066976928}
   - {fileID: -7116889763374754768}
   - {fileID: 5011004730782197860}
+  - {fileID: -7629204187733085580}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638379979092862775
+  cacheTime: 638381694441486576
   cacheVersion: 131609
 --- !u!114 &1345801562066976928
 MonoBehaviour:
@@ -259,12 +287,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638379979092852825
+  lastModified: 638381694441466606
   FileSizes:
   - Name: Desktop
-    Value: 2130528
+    Value: 2167648
   - Name: Mobile
-    Value: 4982624
+    Value: 5036928
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:

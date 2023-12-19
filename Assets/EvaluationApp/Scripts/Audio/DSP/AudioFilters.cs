@@ -29,6 +29,8 @@ public class Biquad : AudioFilter
 
         for(int i=0; i<inputBuffer.Length; i+=2)
         {
+            CalculateCoefficients(fc,q,peakGain);
+
             inL = inputBuffer[i];
             inR = inputBuffer[i+1];
 

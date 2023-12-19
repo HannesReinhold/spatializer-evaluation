@@ -121,10 +121,10 @@ public struct SubjectiveEvaluationPartData
     public string description;
     public string question;
     public string comparisonAspect;
-    public string nimValue;
+    public string minValue;
     public string maxValue;
-    public float minValueNumer;
-    public float maxValueNumer;
+    public float minValueNumber;
+    public float maxValueNumber;
     public ConcreteSubjectiveEvaluation[] singleEvaluations;
 }
 
