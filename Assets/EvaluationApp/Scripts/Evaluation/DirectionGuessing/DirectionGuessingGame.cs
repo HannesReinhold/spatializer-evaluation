@@ -28,6 +28,8 @@ public class DirectionGuessingGame : MonoBehaviour
 
     private float startTime = 0;
 
+    public bool tutorial = false;
+
 
     private List<Vector3> guessList = new List<Vector3>();
 
