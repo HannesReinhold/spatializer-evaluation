@@ -166,8 +166,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294760063
-  m_fontColor: {r: 0.49803925, g: 0.83921576, b: 0.98823535, a: 1}
+    rgba: 4286577816
+  m_fontColor: {r: 0.59607846, g: 0.9882353, b: 0.49803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803925, g: 0.83921576, b: 0.98823535, a: 1}
+  m_Color: {r: 0.59607846, g: 0.9882353, b: 0.49803922, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1027,6 +1027,7 @@ GameObject:
   - component: {fileID: 7726473344051147646}
   - component: {fileID: 964871025250734748}
   - component: {fileID: 7061214582973430101}
+  - component: {fileID: 1423299892459712238}
   m_Layer: 5
   m_Name: Close
   m_TagString: Untagged
@@ -1148,6 +1149,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1423299892459712238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914114265381370169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdcd79f4e41fd54fad7c4e0fb5c5709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playClickSound: 1
+  clickSound:
+    Guid:
+      Data1: 547857512
+      Data2: 1117569117
+      Data3: -1700498047
+      Data4: 683093544
+    Path: event:/UI/WindowOpen
+  clickVibration: 0.2
+  playEnterSound: 0
+  enterSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enterVibration: 0.05
+  playExitSound: 0
+  exitSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  exitVibration: 0.05
 --- !u!1 &3171574541453670142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1200,7 @@ GameObject:
   - component: {fileID: 5887598612778585136}
   - component: {fileID: 3434459448349386218}
   - component: {fileID: 7803868172037183878}
+  - component: {fileID: 5545535707196359106}
   m_Layer: 5
   m_Name: Open
   m_TagString: Untagged
@@ -1281,6 +1322,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5545535707196359106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3171574541453670142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdcd79f4e41fd54fad7c4e0fb5c5709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playClickSound: 1
+  clickSound:
+    Guid:
+      Data1: 547857512
+      Data2: 1117569117
+      Data3: -1700498047
+      Data4: 683093544
+    Path: event:/UI/WindowOpen
+  clickVibration: 0.2
+  playEnterSound: 0
+  enterSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enterVibration: 0.05
+  playExitSound: 0
+  exitSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  exitVibration: 0.05
 --- !u!1 &3416624979023425476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,6 +2166,7 @@ GameObject:
   - component: {fileID: 6457551124184453744}
   - component: {fileID: 4938533981117883513}
   - component: {fileID: 8969290342990030265}
+  - component: {fileID: 3826701004801048659}
   m_Layer: 5
   m_Name: A
   m_TagString: Untagged
@@ -2219,7 +2300,46 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
+--- !u!114 &3826701004801048659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5794590919382750487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdcd79f4e41fd54fad7c4e0fb5c5709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playClickSound: 1
+  clickSound:
+    Guid:
+      Data1: -310857892
+      Data2: 1302778900
+      Data3: 1186670004
+      Data4: -1261240938
+    Path: event:/UI/Select
+  clickVibration: 0.2
+  playEnterSound: 0
+  enterSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enterVibration: 0.05
+  playExitSound: 0
+  exitSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  exitVibration: 0.05
 --- !u!1 &5799729804207455198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,6 +2353,7 @@ GameObject:
   - component: {fileID: 3606648064686617562}
   - component: {fileID: 3554749360494308442}
   - component: {fileID: 4513143040233297847}
+  - component: {fileID: 3318985149599482662}
   m_Layer: 5
   m_Name: B
   m_TagString: Untagged
@@ -2366,7 +2487,46 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
+--- !u!114 &3318985149599482662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799729804207455198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdcd79f4e41fd54fad7c4e0fb5c5709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playClickSound: 1
+  clickSound:
+    Guid:
+      Data1: -310857892
+      Data2: 1302778900
+      Data3: 1186670004
+      Data4: -1261240938
+    Path: event:/UI/Select
+  clickVibration: 0.2
+  playEnterSound: 0
+  enterSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enterVibration: 0.05
+  playExitSound: 0
+  exitSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  exitVibration: 0.05
 --- !u!1 &5875138218103020199
 GameObject:
   m_ObjectHideFlags: 0

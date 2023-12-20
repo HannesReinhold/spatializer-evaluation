@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public FMODUnity.StudioEventEmitter emitter;
+
 
     public bool playClickSound = false;
     public FMODUnity.EventReference clickSound;
