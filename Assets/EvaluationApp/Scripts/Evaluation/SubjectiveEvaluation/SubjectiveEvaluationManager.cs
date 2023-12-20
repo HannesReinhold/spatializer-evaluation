@@ -8,6 +8,11 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     public GameObject introduction;
     public GameObject tutorial;
     public GameObject evaluationRound;
+    public GameObject finish;
+
+    public SubjectiveEvaluationRound roundManager;
+
+    private int roundID = 0;
 
     private void Start()
     {
@@ -31,13 +36,21 @@ public class SubjectiveEvaluationManager : MonoBehaviour
 
     public void FinishEvaluation()
     {
-
+        evaluationRound.SetActive(false);
+        finish.SetActive(true);
     }
 
     public void StartRound()
     {
         tutorial.SetActive(false);
         evaluationRound.SetActive(true);
+    }
+
+    public void NextRound()
+    {
+        roundID++;
+        if(roundID < 2 ) roundManager.StartRound();
+        else FinishEvaluation();
     }
 
 

@@ -5,14 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public GameObject IntroductionPrefab;
-    public GameObject SubjectiveEvaluationPrefab;
-    public GameObject DirectionGuessingPrefab;
+    //public GameObject IntroductionPrefab;
+    //public GameObject SubjectiveEvaluationPrefab;
+    //public GameObject DirectionGuessingPrefab;
 
 
-    private GameObject introductionObject;
-    private GameObject subjectiveObject;
-    private GameObject directionGuessingObject;
+    public GameObject introductionObject;
+    public GameObject subjectiveObject;
+    public GameObject directionGuessingObject;
 
 
     public bool hasCompletedIntroduction = false;
@@ -54,9 +54,30 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        SetupWorldCamera();
+    }
+
+    private void Update()
+    {
+    }
+
+    private void SetupWorldCamera()
+    {
+        Canvas[] canvasList = FindObjectsOfType<Canvas>();
+        foreach (Canvas canvas in canvasList)
+        {
+            canvas.worldCamera = Camera.main;
+            Debug.Log(Camera.main);
+        }
+    }
+
     public void StartNewSession()
     {
-        if(introductionObject == null) introductionObject = Instantiate(IntroductionPrefab);
+        introductionObject.SetActive(true);
+        subjectiveObject.SetActive(false);
+        directionGuessingObject.SetActive(false);
     }
 
     public void InitializeGame()
@@ -66,13 +87,15 @@ public class GameManager : MonoBehaviour
 
     public void StartSubjectiveEvaluation()
     {
-        if (subjectiveObject == null) subjectiveObject = Instantiate(SubjectiveEvaluationPrefab);
-        if (introductionObject != null) introductionObject.SetActive(false);
+        introductionObject.SetActive(false);
+        subjectiveObject.SetActive(true);
+        directionGuessingObject.SetActive(false);
     }
 
     public void StartDirectionGuessing()
     {
-        if(directionGuessingObject == null) directionGuessingObject = Instantiate(DirectionGuessingPrefab);
-        if(introductionObject != null) introductionObject.SetActive(false);
+        introductionObject.SetActive(false);
+        subjectiveObject.SetActive(false);
+        directionGuessingObject.SetActive(true);
     }
 }

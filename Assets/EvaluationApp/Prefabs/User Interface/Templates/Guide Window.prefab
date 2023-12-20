@@ -931,6 +931,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6463244824142054152, guid: bf1aeadf9967e08428dae11e9ba5c21b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5176471
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5630631005112403771, guid: bf1aeadf9967e08428dae11e9ba5c21b, type: 3}
     - {fileID: 5630631005112403770, guid: bf1aeadf9967e08428dae11e9ba5c21b, type: 3}
@@ -1186,6 +1190,10 @@ PrefabInstance:
     - target: {fileID: 4801289236566049981, guid: 1305e611590249447aea8e6f6dd62dff, type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801289236566049982, guid: 1305e611590249447aea8e6f6dd62dff, type: 3}
+      propertyPath: m_Color.a
+      value: 0.16862746
       objectReference: {fileID: 0}
     - target: {fileID: 4801289236566049982, guid: 1305e611590249447aea8e6f6dd62dff, type: 3}
       propertyPath: m_Color.b
