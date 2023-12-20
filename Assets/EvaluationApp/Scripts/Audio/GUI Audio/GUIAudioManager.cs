@@ -34,5 +34,15 @@ public static class GUIAudioManager
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientVolume",v);
     }
 
+    public static void PlaySlideOpen(Vector3 pos)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/SlideOpen", pos);
+    }
+
+    public static void PlaySlideClose(Vector3 pos)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/SlideClose", pos);
+    }
+
 
 }

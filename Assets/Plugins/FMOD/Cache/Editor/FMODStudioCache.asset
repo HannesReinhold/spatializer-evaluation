@@ -132,6 +132,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1850
+--- !u!114 &-3191591876786134200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/SlideClose 2
+  m_EditorClassIdentifier: 
+  Path: event:/UI/SlideClose 2
+  Guid:
+    Data1: 1442130698
+    Data2: 1277936583
+    Data3: 1337877671
+    Data4: 880482117
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 482
 --- !u!114 &-2529225735114066685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,12 +174,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638381694441486576
+  lastModified: 638386758400828396
   FileSizes:
   - Name: Desktop
-    Value: 1478
+    Value: 1654
   - Name: Mobile
-    Value: 1478
+    Value: 1654
   Exists: 1
 --- !u!114 &-1913494650824637462
 MonoBehaviour:
@@ -237,13 +264,17 @@ MonoBehaviour:
   - {fileID: -7116889763374754768}
   - {fileID: 5011004730782197860}
   - {fileID: -7629204187733085580}
+  - {fileID: 4151885285842672026}
+  - {fileID: 9094421266942062038}
+  - {fileID: -3191591876786134200}
+  - {fileID: 2397608018857599529}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638381694441486576
+  cacheTime: 638386758400828396
   cacheVersion: 131609
 --- !u!114 &1345801562066976928
 MonoBehaviour:
@@ -272,6 +303,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 154488
+--- !u!114 &2397608018857599529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/SlideOpen 2
+  m_EditorClassIdentifier: 
+  Path: event:/UI/SlideOpen 2
+  Guid:
+    Data1: -544932000
+    Data2: 1285105195
+    Data3: -639584069
+    Data4: -414874607
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 482
 --- !u!114 &3001012958590905968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,12 +345,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638381694441466606
+  lastModified: 638386758400803229
   FileSizes:
   - Name: Desktop
-    Value: 2167648
+    Value: 2178976
   - Name: Mobile
-    Value: 5036928
+    Value: 5096352
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -348,6 +406,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &4151885285842672026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/SlideClose
+  m_EditorClassIdentifier: 
+  Path: event:/UI/SlideClose
+  Guid:
+    Data1: 1450630497
+    Data2: 1248124054
+    Data3: -1850943574
+    Data4: -901662008
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 497
 --- !u!114 &5011004730782197860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,3 +541,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &9094421266942062038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/SlideOpen
+  m_EditorClassIdentifier: 
+  Path: event:/UI/SlideOpen
+  Guid:
+    Data1: 409621428
+    Data2: 1143094705
+    Data3: 1900753811
+    Data4: -93787797
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 482
