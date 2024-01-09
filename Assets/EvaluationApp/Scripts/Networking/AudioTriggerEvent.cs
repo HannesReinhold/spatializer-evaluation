@@ -33,9 +33,9 @@ public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
     }
 
     // A public method we can use to fire the event
-    public void Emit()
+    public void Emit(int start)
     {
-        model.FireEvent(realtime.clientID);
+        model.FireEvent(0,start);
     }
 
     // Called whenever our event fires

@@ -50,7 +50,7 @@ public class SubjectiveEvaluationRound : MonoBehaviour
 
     public void StartRound(bool nextAspect)
     {
-        sync.SetAudioOutput(false,);
+        //sync.SetAudioOutput(false,);
 
 
         if (nextAspect) windowManager.OpenPage(0);

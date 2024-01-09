@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class AudioSync : MonoBehaviour
 {
@@ -12,6 +13,21 @@ public class AudioSync : MonoBehaviour
 
 
     public List<VirtualAudioSwitcher> virtualSpeaker;
+
+
+    private void Start()
+    {
+
+    }
+
+
+
+
+    public void PlayVirtualSpeaker(int speakerID, int spatializerID, int audioID)
+    {
+        virtualSpeaker[speakerID].Play(spatializerID, audioID);
+    }
+
 
 
     public void SetAudioOutput(bool real, int speakerID, int spatializerID)

@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,13 @@ using UnityEngine;
 public class VirtualAudioSwitcher : MonoBehaviour
 {
     public List<FMODUnity.StudioEventEmitter> virtualAudioEmitter = new List<FMODUnity.StudioEventEmitter>();
+
+    [Header("Events")]
+    public List<EventReference> refOculus;
+    public List<EventReference> refResonance;
+    public List<EventReference> refSteam;
+
+
 
     int lastIndex = 0;
     double time = 0;
@@ -32,5 +40,11 @@ public class VirtualAudioSwitcher : MonoBehaviour
     public void Stop()
     {
         virtualAudioEmitter[lastIndex].Stop();
+    }
+
+    public void Play(int spatializerID, int audioID)
+    {
+        //virtualAudioEmitter[spatializerID].EventReference = "";
+        virtualAudioEmitter[spatializerID].Play();
     }
 }

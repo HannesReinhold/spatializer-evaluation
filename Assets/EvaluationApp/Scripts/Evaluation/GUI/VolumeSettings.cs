@@ -17,5 +17,6 @@ public class VolumeSettings : MonoBehaviour
     {
         //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Volume", slider.value);
         bus.setVolume(slider.value);
+        GameManager.Instance.dataManager.currentSessionData.volume = slider.value;
     }
 }
