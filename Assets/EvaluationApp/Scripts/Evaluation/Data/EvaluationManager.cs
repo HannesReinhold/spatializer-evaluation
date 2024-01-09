@@ -88,7 +88,7 @@ public class EvaluationManager : MonoBehaviour
                 break;
             case 1:
                 //EnableAudioSource(true);
-                StartSpeakers(evaluationData.evaluationParts[0].singleEvaluations[currentEvaluationIndex].baseSpatializerID - 1);
+                StartSpeakers(evaluationData.evaluationParts[0].evaluations[currentEvaluationIndex].baseSpatializerID - 1);
                 break;
             default:
                 //EnableAudioSource(false);

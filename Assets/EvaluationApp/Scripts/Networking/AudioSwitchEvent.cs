@@ -42,9 +42,13 @@ public class AudioSwitchEvent : RealtimeComponent<AudioSwitchEventModel>
         model.FireEvent(speakerID, useRealSpeaker);
     }
 
+    int id = 0;
+
     // Called whenever our event fires
     private void SettingsSet(int speakerID, int realAudio)
     {
+        id++;
+
         if (outputChannelRouter != null) outputChannelRouter.SetOutputChannel(speakerID);
 
         if (isVR)

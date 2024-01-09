@@ -8,11 +8,10 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
 {
     public TextMeshProUGUI Header;
     public TextMeshProUGUI Description;
-    public TextMeshProUGUI Min;
-    public TextMeshProUGUI Max;
 
 
     public SubjectiveEvaluationData evaluationData;
+    private int currentRoundID = 0;
 
     public EvaluationManager evaluationManager;
 
@@ -33,18 +32,22 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
         slider.value = 50;
     }
 
-    public void SetInterface(SubjectiveEvaluation evaluationInfo)
+    public void ShowNextEvaluation(int partID, int roundID)
     {
-        Header.text = "Spatializer " + evaluationInfo.id + " / " + 5;
+        currentRoundID = roundID;
+        SetInterface(evaluationData.evaluationParts[partID]);
+    }
+
+    public void SetInterface(SubjectiveEvaluationPartData evaluationInfo)
+    {
+        ConcreteSubjectiveEvaluation eval = evaluationInfo.evaluations[currentRoundID];
+        
+
+        Header.text = evaluationInfo.name;
         Description.text = evaluationInfo.description;
 
-        Min.text = evaluationInfo.minValue;
-        Max.text = evaluationInfo.maxValue;
-
-        toggleA.text = "Unity";
-        toggleB.text = evaluationInfo.spatializerName;
-        sliderMin.text = "Unity";
-        sliderMax.text = evaluationInfo.spatializerName;
+        sliderMin.text = evaluationInfo.minValue;
+        sliderMax.text = evaluationInfo.maxValue;
     }
 
     public void SetEvaluationData(int index)
@@ -62,7 +65,8 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
 
     public void OnSliderChanged(float value)
     {
-        evaluationData.evaluationParts[0].singleEvaluations[0].value = value;
+        evaluationData.evaluationParts[0].evaluations[0].value = value;
+        //GameManager.Instance.dataManager.currentSessionData.subjectiveEvaluationResults
     }
 
     public void OnNextClicked()

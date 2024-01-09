@@ -20,7 +20,7 @@ public class DataManager
     {
         Guid id = new Guid();
         currentSessionData = new SessionData(id.ToString());
-        currentSessionData.gender = Gender.Female;
+        currentSessionData.sex = Gender.Male;
         currentSessionData.age = 18;
     }
 
@@ -73,12 +73,12 @@ public class DataManager
 
     private void ExtractData()
     {
-        data = JsonUtility.FromJson<SpatializerEvaluationData>(json);
+        spatializerData = JsonUtility.FromJson<SpatializerEvaluationData>(json);
     }
 
 
-    private SpatializerEvaluationData data = new SpatializerEvaluationData();
-    private string json = "{\"spatializerInfo\":[{\"spatializerID\":0,\"name\":\"Real World Audio\",\"shortaName\":\"Real Audio\",\"creator\":\"none\"},{\"spatializerID\":1,\"name\":\"Unity Default Spatializer\",\"shortaName\":\"Unity Default\",\"creator\":\"Unity\"},{\"spatializerID\":2,\"name\":\"Oculus Spatializer\",\"shortaName\":\"Oculus\",\"creator\":\"Meta\"},{\"spatializerID\":3,\"name\":\"Resonance Spatializer\",\"shortaName\":\"Resonance\",\"creator\":\"Google\"},{\"spatializerID\":4,\"name\":\"Steam Audio Spatializer\",\"shortaName\":\"Steam Audio\",\"creator\":\"Valve\"},{\"spatializerID\":5,\"name\":\"Hannes Audio Spatializer\",\"shortaName\":\"Own Spatializer\",\"creator\":\"Hannes Reinhold\"}],\"speakerData\":[{\"speakerID\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}}],\"subjectiveEvaluationData\":{\"evaluationParts\":[{\"partID\":0,\"name\":\"Direction\",\"desription\":\"This evaluation is conducted in an mostly empty room. It tests directionality rather than phenomena such as occlusion or reverberation.\",\"question\":\"How well can you determine the direction of the spatialized noise compared to the real noise?\",\"comparisonAspect\":\"direction\",\"minValue\":\"Very Different\",\"maxValue\":\"Very Identical\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":0,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":4,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":6,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":2,\"value\":50},{\"evaluationID\":4,\"baseSpatializerID\":0,\"comparisonSpatializerID\":5,\"speakerID\":1,\"value\":50}]},{\"partID\":1,\"name\":\"Attenuation\",\"desription\":\"This evaluation is conducted in an mostly empty room. It tests the audio phenomena 'distance attenuation', which means that the sound gets quieter with increasing distance.\",\"question\":\"How well can you determine the distance of the spatialized noise compared to the real noise?\",\"comparisonAspect\":\"attenuation\",\"minValue\":\"Very Different\",\"maxValue\":\"Very Identical\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":5,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":2,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":1,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":3,\"value\":50},{\"evaluationID\":4,\"baseSpatializerID\":0,\"comparisonSpatializerID\":5,\"speakerID\":4,\"value\":50}]},{\"partID\":3,\"name\":\"Occlusion\",\"desription\":\"This time the room contains some obstacles which should obstruct the sound. This means if an obstacle is between you and the audio source, the sound gets quieter and more muffled.\",\"question\":\"How well does the spatialized occlusion effect match the real world?\",\"comparisonAspect\":\"occlusion\",\"minValue\":\"Very Different\",\"maxValue\":\"Very Identical\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":3,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":6,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":4,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":1,\"value\":50},{\"evaluationID\":4,\"baseSpatializerID\":0,\"comparisonSpatializerID\":5,\"speakerID\":2,\"value\":50}]},{\"partID\":3,\"name\":\"Reverb\",\"desription\":\"This time we will evaluate how good these spatializers can simulate audio reflections and reverb.\",\"question\":\"How realistic does the virtual reverb sound like in comparison to the real one?\",\"comparisonAspect\":\"reverb\",\"minValue\":\"Very Unrealistic\",\"maxValue\":\"Very Realistic\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":1,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":4,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":2,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":3,\"value\":50},{\"evaluationID\":4,\"baseSpatializerID\":0,\"comparisonSpatializerID\":5,\"speakerID\":5,\"value\":50}]}]}}";
+    public SpatializerEvaluationData spatializerData = new SpatializerEvaluationData();
+    private string json = "{\"spatializerInfo\":[{\"spatializerID\":0,\"name\":\"Real World Audio\",\"shortName\":\"Real Audio\",\"creator\":\"none\"},{\"spatializerID\":1,\"name\":\"Oculus Spatializer\",\"shortName\":\"Oculus\",\"creator\":\"Meta\"},{\"spatializerID\":2,\"name\":\"Resonance Spatializer\",\"shortName\":\"Resonance\",\"creator\":\"Google\"},{\"spatializerID\":3,\"name\":\"Steam Audio Spatializer\",\"shortName\":\"Steam Audio\",\"creator\":\"Valve\"},{\"spatializerID\":4,\"name\":\"Hannes Audio Spatializer\",\"shortName\":\"Own Spatializer\",\"creator\":\"Hannes Reinhold\"}],\"speakerData\":[{\"speakerID\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}},{\"speakerID\":1,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}},{\"speakerID\":2,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}},{\"speakerID\":3,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}},{\"speakerID\":4,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}},{\"speakerID\":5,\"position\":{\"x\":0,\"y\":0,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0,\"w\":0}}],\"subjectiveEvaluationData\":{\"evaluationParts\":[{\"partID\":0,\"name\":\"Direction\",\"description\":\"This evaluation is conducted in an mostly empty room. It tests directionality rather than phenomena such as occlusion or reverberation.\",\"question\":\"How well can you determine the direction of the spatialized noise compared to the real noise?\",\"comparisonAspect\":\"direction\",\"minValue\":\"Very Different\",\"maxValue\":\"Very Similar\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":0,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":4,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":6,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":2,\"value\":50}]},{\"partID\":1,\"name\":\"Attenuation\",\"description\":\"This evaluation is conducted in an mostly empty room. It tests the audio phenomena 'distance attenuation', which means that the sound gets quieter with increasing distance.\",\"question\":\"How well can you determine the distance of the spatialized noise compared to the real noise?\",\"comparisonAspect\":\"attenuation\",\"minValue\":\"Very Different\",\"maxValue\":\"Very Similar\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":5,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":2,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":1,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":3,\"value\":50}]},{\"partID\":3,\"name\":\"Occlusion\",\"description\":\"This time the room contains some obstacles which should obstruct the sound. This means if an obstacle is between you and the audio source, the sound gets quieter and more muffled.\",\"question\":\"How well does the spatialized occlusion effect match the real world?\",\"comparisonAspect\":\"occlusion\",\"minValue\":\"Very Different\",\"maxValue\":\"Very Similar\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":3,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":6,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":4,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":1,\"value\":50}]},{\"partID\":3,\"name\":\"Reverb\",\"description\":\"This time we will evaluate how good these spatializers can simulate audio reflections and reverb.\",\"question\":\"How realistic does the virtual reverb sound like in comparison to the real one?\",\"comparisonAspect\":\"reverb\",\"minValue\":\"Very Unrealistic\",\"maxValue\":\"Very Realistic\",\"minNumber\":0,\"maxNumber\":100,\"evaluations\":[{\"evaluationID\":0,\"baseSpatializerID\":0,\"comparisonSpatializerID\":1,\"speakerID\":1,\"value\":50},{\"evaluationID\":1,\"baseSpatializerID\":0,\"comparisonSpatializerID\":2,\"speakerID\":4,\"value\":50},{\"evaluationID\":2,\"baseSpatializerID\":0,\"comparisonSpatializerID\":3,\"speakerID\":2,\"value\":50},{\"evaluationID\":3,\"baseSpatializerID\":0,\"comparisonSpatializerID\":4,\"speakerID\":3,\"value\":50}]}]}}\r\n";
 }
 
 
@@ -87,7 +87,7 @@ public struct SpatializerEvaluationData
 {
     public SpatializerInfo[] spatializerInfo;
     public SpeakerInfo[] speakerInfo;
-    SubjectiveEvaluationData data;
+    public SubjectiveEvaluationData subjectiveEvaluationData;
 }
 
 [System.Serializable]
@@ -97,6 +97,14 @@ public struct SpatializerInfo
     public string name;
     public string shortName;
     public string creator;
+
+    public SpatializerInfo(int id, string name, string sName, string creat)
+    {
+        spatializerID = id;
+        this.name = name;
+        this.shortName = sName;
+        this.creator = creat;
+    }
 }
 
 [System.Serializable]
@@ -105,12 +113,19 @@ public struct SpeakerInfo
     public int speakerID;
     public Vector3 position;
     public Quaternion rotation;
+
+    public SpeakerInfo(int id, Vector3 pos, Quaternion rot)
+    {
+        speakerID = id;
+        position = pos; 
+        rotation = rot;
+    }
 }
 
 [System.Serializable]
-public struct SubjectiveEvaluationData
+public class SubjectiveEvaluationData
 {
-    public SubjectiveEvaluationPartData[] evaluationParts;
+    public List<SubjectiveEvaluationPartData> evaluationParts = new List<SubjectiveEvaluationPartData>();
 }
 
 [System.Serializable]
@@ -125,7 +140,22 @@ public struct SubjectiveEvaluationPartData
     public string maxValue;
     public float minValueNumber;
     public float maxValueNumber;
-    public ConcreteSubjectiveEvaluation[] singleEvaluations;
+    public ConcreteSubjectiveEvaluation[] evaluations;
+
+    public SubjectiveEvaluationPartData(int id, string name, string desc, string que, string asp, string min, string max, float minNum, float maxNum)
+    {
+        this.partID = id;
+        this.name = name;
+        this.description = desc;
+        this.question = que;
+        this.comparisonAspect = asp;
+        this.minValue = min;
+        this.maxValue = max;
+        this.minValueNumber = minNum;
+        this.maxValueNumber = maxNum;
+        //singleEvaluations = new List<ConcreteSubjectiveEvaluation>();
+        evaluations = new ConcreteSubjectiveEvaluation[10];
+    }
 }
 
 [System.Serializable]

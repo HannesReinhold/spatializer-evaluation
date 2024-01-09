@@ -825,11 +825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5630631005112403774, guid: bf1aeadf9967e08428dae11e9ba5c21b, type: 3}
       propertyPath: openDelay
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5630631005112403774, guid: bf1aeadf9967e08428dae11e9ba5c21b, type: 3}
       propertyPath: openDuration
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5630631005112403775, guid: bf1aeadf9967e08428dae11e9ba5c21b, type: 3}
       propertyPath: m_Pivot.x

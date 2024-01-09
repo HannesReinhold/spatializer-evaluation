@@ -51,6 +51,7 @@ public class DirectionGuessingGameManager : MonoBehaviour
     {
         ResetAll();
         game.SetActive(true);
+        game.GetComponentInChildren<DirectionGuessingGame>().OnStartClick();
     }
 
     public void OpenComplete()

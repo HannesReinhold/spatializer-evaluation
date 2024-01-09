@@ -39,6 +39,7 @@ public class DirectionGuessingTutorial : MonoBehaviour
     public void StartRound()
     {
         enabled = true;
+        enableInput = true;
 
         target.transform.position = positionList[roundID].position;
         target.SetActive(true);
@@ -48,7 +49,7 @@ public class DirectionGuessingTutorial : MonoBehaviour
         Invoke("PlayAudioCue", 1);
         Invoke("PlayAudioCue", 2);
 
-        Invoke("Shoot", 3);
+       // Invoke("Shoot", 3);
     }
 
     void Shoot()

@@ -19,12 +19,12 @@ public class WindowManager : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            NextPage();
+            //NextPage();
         }
 
         if (OVRInput.GetDown(OVRInput.Button.Two))
         {
-            PreviousPage();
+            //PreviousPage();
         }
     }
 

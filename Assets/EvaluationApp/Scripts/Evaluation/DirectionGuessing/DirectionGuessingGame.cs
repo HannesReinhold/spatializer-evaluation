@@ -21,7 +21,7 @@ public class DirectionGuessingGame : MonoBehaviour
     private Vector3 guessedDirection;
 
     private int currentRound = 0;
-    public int numRounds = 25;
+    public int numRounds = 2;
     public int countdownTime = 3;
 
     private bool enableInput = false;
@@ -34,12 +34,25 @@ public class DirectionGuessingGame : MonoBehaviour
     private List<Vector3> guessList = new List<Vector3>();
 
 
-    void Start()
+    private int currentSpatializer = 0;
+
+
+    void OnEnable()
+    {
+        //StartGame();
+        //controllerTransform = GameObject.Find("RightHandAnchor").transform;
+        //GUIAudioManager.SetAmbientVolume(0.1f);
+    }
+
+    public void OnStartClick()
     {
         StartGame();
         controllerTransform = GameObject.Find("RightHandAnchor").transform;
+        //controllerTransform = transform;
         GUIAudioManager.SetAmbientVolume(0.1f);
     }
+
+    
 
 
     void Update()
@@ -56,6 +69,8 @@ public class DirectionGuessingGame : MonoBehaviour
     {
         startWindow.gameObject.SetActive(true);
         startWindow.Open();
+
+        
         target.SetActive(false);
     }
 
@@ -69,6 +84,7 @@ public class DirectionGuessingGame : MonoBehaviour
         lineRendererGuessed.gameObject.SetActive(false);
         lineRendererActual.gameObject.SetActive(false);
         DisableControllerInput();
+        GUIAudioManager.SetAmbientVolume(0.1f);
     }
 
     public void OnFinishClick()
@@ -133,6 +149,8 @@ public class DirectionGuessingGame : MonoBehaviour
         PlayAudioCue();
         Invoke("PlayAudioCue",1);
         Invoke("PlayAudioCue", 2);
+
+        Debug.Log("Respawn");
     }
 
     /// <summary>
@@ -157,7 +175,14 @@ public class DirectionGuessingGame : MonoBehaviour
     /// </summary>
     private void PlayAudioCue()
     {
-        GUIAudioManager.PlayMenuSubmit(target.transform.position);
+        switch (currentSpatializer) {
+            case 1: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
+            case 2: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
+            case 3: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
+            case 4: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
+
+        }
+
     }
 
     /// <summary>
@@ -195,7 +220,7 @@ public class DirectionGuessingGame : MonoBehaviour
         DrawDirectionLines(new Vector3(guessedDirection.x, guessedDirection.y, guessedDirection.z).normalized, new Vector3(actualDirection.x, actualDirection.y, actualDirection.z).normalized);
 
         // show error as text
-        textMesh.text = "Azimuth: " + azimuth + "\n Elevation: " + elevation;
+        //textMesh.text = "Azimuth: " + azimuth + "\n Elevation: " + elevation;
 
 
         // show target
@@ -209,6 +234,7 @@ public class DirectionGuessingGame : MonoBehaviour
 
 
         currentRound++;
+        currentSpatializer = currentRound % 4 + 1;
 
         // if all rounds are over, finish game
         if (currentRound < numRounds)

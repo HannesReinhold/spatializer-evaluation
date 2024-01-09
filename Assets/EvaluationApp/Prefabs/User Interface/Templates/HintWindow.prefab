@@ -105,8 +105,8 @@ MonoBehaviour:
   minY: -0.1
   maxY: 0
   minAlpha: 0
-  maxAlpha: 0
-  tiltDeg: 30
+  maxAlpha: 1
+  tiltDeg: 0
   canvas: {fileID: 0}
 --- !u!225 &2269822439908336158
 CanvasGroup:
@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.2356, y: -0.436}
+  m_AnchoredPosition: {x: 1.2355957, y: -0.43600464}
   m_SizeDelta: {x: 600, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7411476573936906518
@@ -399,8 +399,8 @@ MonoBehaviour:
   minY: -0.1
   maxY: 0
   minAlpha: 0
-  maxAlpha: 0
-  tiltDeg: 30
+  maxAlpha: 1
+  tiltDeg: 0
   canvas: {fileID: 0}
 --- !u!225 &7705617423051545818
 CanvasGroup:

@@ -14,6 +14,8 @@ public class EvaluationWindow : MonoBehaviour
     public TextMeshProUGUI maxValueText;
     public TextMeshProUGUI currentValueText;
 
+    public AudioSync sync;
+
     private SubjectiveEvaluationRound roundManager;
 
     public RectTransform maskTransform;
@@ -77,4 +79,5 @@ public class EvaluationWindow : MonoBehaviour
         if (descriptionOpen) OpenDescription();
         else CloseDescription();
     }
+    
 }

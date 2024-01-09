@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Normal.Realtime;
+using static UnityEngine.GraphicsBuffer;
 
 public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
 {
-    [SerializeField]
-    private ParticleSystem audioSourceIndicator;
 
     [SerializeField]
     private AudioSource audioSource;
+    public AudioSync sync;
+    bool on = false;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
     }
 
     // A public method we can use to fire the event
-    public void Emit(int speakerID)
+    public void Emit()
     {
         model.FireEvent(realtime.clientID);
     }
@@ -40,8 +41,18 @@ public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
     // Called whenever our event fires
     private void EventDidFire(int senderID)
     {
-        audioSource.time = 0;
-        audioSource.Play();
-        Debug.Log("Playing Audio");
+        on = !on;
+        if (on)
+        {
+            audioSource.time = 0;
+            audioSource.Play();
+            sync.StopSpatializer();
+        }
+        else
+        {
+            audioSource.Stop();
+            sync.PlaySpatializer();
+        }
+
     }
 }

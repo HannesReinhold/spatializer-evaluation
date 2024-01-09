@@ -9,6 +9,7 @@ public class HintArrow : MonoBehaviour
     public RectTransform arrow;
 
     public RectTransform target;
+    public Transform target3D;
 
     public Vector2 direction = new Vector2(1,0);
     public Vector3 position;

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     //public GameObject SubjectiveEvaluationPrefab;
     //public GameObject DirectionGuessingPrefab;
 
+    public bool IsVR = true;
+
 
     public GameObject introductionObject;
     public GameObject subjectiveObject;
@@ -20,6 +22,9 @@ public class GameManager : MonoBehaviour
     public bool hasCompletedDirectionGuessing = false;
 
     private static GameManager instance;
+
+
+    public DataManager dataManager;
 
     public static GameManager Instance
     {
@@ -44,6 +49,7 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
+            dataManager = new DataManager();
             
 
 
@@ -75,9 +81,13 @@ public class GameManager : MonoBehaviour
 
     public void StartNewSession()
     {
+        dataManager.InitializeSession();
+
+
         introductionObject.SetActive(true);
         subjectiveObject.SetActive(false);
         directionGuessingObject.SetActive(false);
+
     }
 
     public void InitializeGame()
@@ -97,5 +107,10 @@ public class GameManager : MonoBehaviour
         introductionObject.SetActive(false);
         subjectiveObject.SetActive(false);
         directionGuessingObject.SetActive(true);
+    }
+
+    public void FinishSession()
+    {
+        dataManager.SaveSession();
     }
 }

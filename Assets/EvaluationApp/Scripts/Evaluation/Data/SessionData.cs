@@ -7,17 +7,17 @@ public class SessionData
 {
 
     public string id;
-    public Gender gender;
+    public Gender sex;
     public int age;
     public float volume;
 
-    public List<SubjectiveEvaluationData> subjectiveEvaluationResults;
+    public List<ConcreteSubjectiveEvaluation> subjectiveEvaluationResults;
     public List<DirectionGuessingData> directionGuessingResults;
 
     public SessionData(string id)
     {
         this.id = id;
-        subjectiveEvaluationResults = new List<SubjectiveEvaluationData>();
+        subjectiveEvaluationResults = new List<ConcreteSubjectiveEvaluation>();
         directionGuessingResults = new List<DirectionGuessingData>();
     }
 
