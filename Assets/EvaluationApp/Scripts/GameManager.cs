@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public bool hasCompletedSubjectiveEvaluation = false;
     public bool hasCompletedDirectionGuessing = false;
 
+    public List<GameObject> VRStuff;
+    public List<GameObject> NonVRStuff;
+
     private static GameManager instance;
 
 
@@ -50,7 +53,19 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             dataManager = new DataManager();
+
+
+            foreach(GameObject g in VRStuff)
+            {
+                g.SetActive(IsVR);
+            }
+
+            foreach (GameObject g in NonVRStuff)
+            {
+                g.SetActive(!IsVR);
+            }
             
+
 
 
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class SubjectiveEvaluationRound : MonoBehaviour
 {
@@ -14,10 +15,10 @@ public class SubjectiveEvaluationRound : MonoBehaviour
     public TextMeshProUGUI maxText;
     public TextMeshProUGUI aspectText;
 
-    public AudioSync sync;
+    public SubjectiveAudioSwitch audioSwitch;
 
     public ToggleGroup spatializerSwitch;
-    public Slider ratingSlider;
+    public UnityEngine.UI.Slider ratingSlider;
 
     private SubjectiveEvaluationPartData partData;
     private ConcreteSubjectiveEvaluation roundData;
@@ -38,27 +39,35 @@ public class SubjectiveEvaluationRound : MonoBehaviour
 
     }
 
+    FMOD.Studio.Bus bus;
+
     private void Start()
     {
+        bus = FMODUnity.RuntimeManager.GetBus("bus:/MainSounds");
+        bus.setVolume(1);
         windowManager = GetComponent<WindowManager>();
+        StartRound(false);
+
     }
 
     public void SaveRound()
     {
-
+        audioSwitch.Stop();
     }
 
     public void StartRound(bool nextAspect)
     {
         //sync.SetAudioOutput(false,);
-
+        audioSwitch.SetAll(true,roundData.speakerID, roundData.comparisonSpatializerID);
 
         if (nextAspect) windowManager.OpenPage(0);
         else
         {
             windowManager.OpenPage(1);
-            sync.PlaySound();
+            
         }
+        
+        audioSwitch.Play(partData.fileID);
 
     }
 
@@ -70,7 +79,12 @@ public class SubjectiveEvaluationRound : MonoBehaviour
 
     public void ToggleSpatializer(bool real)
     {
-        sync.SetAudioOutput(real,roundData.comparisonSpatializerID,0);
+        audioSwitch.SetReal(real?1:0);
+    }
+
+    public void SetSpeaker(int id)
+    {
+        audioSwitch.SetSpeaker(id);
     }
 
 }

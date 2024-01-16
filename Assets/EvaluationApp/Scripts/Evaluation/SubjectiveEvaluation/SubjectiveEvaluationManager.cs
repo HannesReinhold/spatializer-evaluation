@@ -22,10 +22,14 @@ public class SubjectiveEvaluationManager : MonoBehaviour
 
     public bool skipTutorial = false;
 
+    FMOD.Studio.Bus bus;
+
     private void Start()
     {
+        bus = FMODUnity.RuntimeManager.GetBus("bus:/Ambience");
         HideAll();
         StartEvalution();
+        
     }
 
 
@@ -45,12 +49,16 @@ public class SubjectiveEvaluationManager : MonoBehaviour
             StartRound(); 
             roundID++;
         }
+        GUIAudioManager.SetAmbientVolume(0);
+
+
     }
 
     public void FinishEvaluation()
     {
         evaluationRound.SetActive(false);
         finish.SetActive(true);
+        GUIAudioManager.SetAmbientVolume(0.1f);
     }
 
     public void StartRound()
@@ -60,6 +68,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
         roundManager.UpdateInterface(GameManager.Instance.dataManager.spatializerData.subjectiveEvaluationData.evaluationParts[partID], roundID);
         tutorial.SetActive(false);
         evaluationRound.SetActive(true);
+
     }
 
     public void NextRound()
@@ -85,7 +94,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
 
     public void SaveData()
     {
-
+        roundManager.SaveRound();
     }
 
     public void StartTutorial()

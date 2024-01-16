@@ -10,7 +10,7 @@ public class RpcTest : MonoBehaviour
     public void Switch(int i)
     {
         id++;
-        settings.SetSettings(id,0);
+        //settings.SetSettings(id,0);
 
     }
 }

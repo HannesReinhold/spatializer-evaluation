@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Normal.Realtime;
 using Normal.Realtime.Serialization;
+using System;
 
 [RealtimeModel]
 public partial class AudioTriggerEventModel
 {
     [RealtimeProperty(1, true)] private int _start;
-    [RealtimeProperty(2, true)] private int _senderID;
+    [RealtimeProperty(2, true)] private int _fileID;
+    [RealtimeProperty(3, true)] private int _senderID;
 
 
 }
@@ -30,6 +32,20 @@ public partial class AudioTriggerEventModel : RealtimeModel
         }
     }
 
+    public int fileID
+    {
+        get
+        {
+            return _fileIDProperty.value;
+        }
+        set
+        {
+            if (_fileIDProperty.value == value) return;
+            _fileIDProperty.value = value;
+            InvalidateReliableLength();
+        }
+    }
+
     public int senderID
     {
         get
@@ -47,12 +63,16 @@ public partial class AudioTriggerEventModel : RealtimeModel
     public enum PropertyID : uint
     {
         Start = 1,
-        SenderID = 2,
+        FileID = 2,
+        SenderID = 3,
+        
     }
 
     #region Properties
 
     private ReliableProperty<int> _startProperty;
+
+    private ReliableProperty<int> _fileIDProperty;
 
     private ReliableProperty<int> _senderIDProperty;
 
@@ -61,7 +81,8 @@ public partial class AudioTriggerEventModel : RealtimeModel
     public AudioTriggerEventModel() : base(null)
     {
         _startProperty = new ReliableProperty<int>(1, _start);
-        _senderIDProperty = new ReliableProperty<int>(2, _senderID);
+        _fileIDProperty = new ReliableProperty<int>(2, _fileID);
+        _senderIDProperty = new ReliableProperty<int>(3, _senderID);
 
         SubscribeEventCallback(Normal.Realtime.RealtimeModelEvent.OnDidRead, DidRead);
     }
@@ -69,6 +90,7 @@ public partial class AudioTriggerEventModel : RealtimeModel
     protected override void OnParentReplaced(RealtimeModel previousParent, RealtimeModel currentParent)
     {
         _startProperty.UnsubscribeCallback();
+        _fileIDProperty.UnsubscribeCallback();
         _senderIDProperty.UnsubscribeCallback();
     }
 
@@ -76,6 +98,7 @@ public partial class AudioTriggerEventModel : RealtimeModel
     {
         var length = 0;
         length += _startProperty.WriteLength(context);
+        length += _fileIDProperty.WriteLength(context);
         length += _senderIDProperty.WriteLength(context);
         return length;
     }
@@ -84,6 +107,7 @@ public partial class AudioTriggerEventModel : RealtimeModel
     {
         var writes = false;
         writes |= _startProperty.Write(stream, context);
+        writes |= _fileIDProperty.Write(stream, context);
         writes |= _senderIDProperty.Write(stream, context);
         if (writes) InvalidateContextLength(context);
     }
@@ -99,6 +123,11 @@ public partial class AudioTriggerEventModel : RealtimeModel
                 case (uint)PropertyID.Start:
                     {
                         changed = _startProperty.Read(stream, context);
+                        break;
+                    }
+                case (uint)PropertyID.FileID:
+                    {
+                        changed = _fileIDProperty.Read(stream, context);
                         break;
                     }
                 case (uint)PropertyID.SenderID:
@@ -123,17 +152,20 @@ public partial class AudioTriggerEventModel : RealtimeModel
     private void UpdateBackingFields()
     {
         _start = start;
+        _fileID = fileID;
+
         _senderID = senderID;
     }
-    public void FireEvent(int senderID, int s)
+    public void FireEvent(int senderID, int s, int fileID)
     {
         this.start = s;
         this.senderID = senderID;
+        this.fileID = fileID;
         //eventDidFire(senderID);
     }
 
     // An event that consumers of this model can subscribe to in order to respond to the event
-    public delegate void EventHandler(int senderID);
+    public delegate void EventHandler(int senderID, int start, int fileID);
     public event EventHandler eventDidFire1;
 
     // A RealtimeCallback method that fires whenever we read any values from the server
@@ -142,7 +174,7 @@ public partial class AudioTriggerEventModel : RealtimeModel
     {
         if (eventDidFire1 != null && start==1)
         {
-            eventDidFire1(senderID);
+            eventDidFire1(senderID, start, fileID);
             start = 0;
         }
     }

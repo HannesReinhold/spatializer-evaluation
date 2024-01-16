@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7816188385489512328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Long/FMODLong
+  m_EditorClassIdentifier: 
+  Path: event:/Long/FMODLong
+  Guid:
+    Data1: 711665556
+    Data2: 1314960585
+    Data3: 78510262
+    Data4: 1952934413
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 154488
 --- !u!114 &-7629204187733085580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +186,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 482
+--- !u!114 &-3174031474103159881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Long/BeatTest/ResonanceBeat
+  m_EditorClassIdentifier: 
+  Path: event:/Long/BeatTest/ResonanceBeat
+  Guid:
+    Data1: -582831253
+    Data2: 1295683475
+    Data3: -646986817
+    Data4: 1959765902
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1906
 --- !u!114 &-2529225735114066685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,12 +228,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638404169804425022
+  lastModified: 638410128029141116
   FileSizes:
   - Name: Desktop
-    Value: 1796
+    Value: 2016
   - Name: Mobile
-    Value: 1796
+    Value: 2016
   Exists: 1
 --- !u!114 &-2102196907736683965
 MonoBehaviour:
@@ -289,6 +343,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 154488
+--- !u!114 &-203713473106778439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Long/BeatTest/OculusBeat
+  m_EditorClassIdentifier: 
+  Path: event:/Long/BeatTest/OculusBeat
+  Guid:
+    Data1: -142652705
+    Data2: 1162967773
+    Data3: 116605367
+    Data4: -939784466
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1906
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,13 +406,18 @@ MonoBehaviour:
   - {fileID: -2102196907736683965}
   - {fileID: 3633153053863163202}
   - {fileID: -704697668483190234}
+  - {fileID: -203713473106778439}
+  - {fileID: -3174031474103159881}
+  - {fileID: 5490321682857335179}
+  - {fileID: 4992244327266201271}
+  - {fileID: -7816188385489512328}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638404169804425022
+  cacheTime: 638410128029141116
   cacheVersion: 131609
 --- !u!114 &1345801562066976928
 MonoBehaviour:
@@ -402,12 +488,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638404169804405032
+  lastModified: 638410128029121114
   FileSizes:
   - Name: Desktop
-    Value: 2182432
+    Value: 2208032
   - Name: Mobile
-    Value: 5099808
+    Value: 5156448
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -458,7 +544,7 @@ MonoBehaviour:
   - {fileID: 3001012958590905968}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -517,6 +603,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 497
+--- !u!114 &4992244327266201271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Long/BeatTest/FMOD
+  m_EditorClassIdentifier: 
+  Path: event:/Long/BeatTest/FMOD
+  Guid:
+    Data1: 1942361227
+    Data2: 1151790534
+    Data3: -994555750
+    Data4: 24894548
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1906
 --- !u!114 &5011004730782197860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +657,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1125
+--- !u!114 &5490321682857335179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Long/BeatTest/SteamBeat
+  m_EditorClassIdentifier: 
+  Path: event:/Long/BeatTest/SteamBeat
+  Guid:
+    Data1: 1145745761
+    Data2: 1200952795
+    Data3: -862293112
+    Data4: 157081917
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1906
 --- !u!114 &6175650532950628365
 MonoBehaviour:
   m_ObjectHideFlags: 0

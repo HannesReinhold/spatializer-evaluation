@@ -70,6 +70,9 @@
 		<relationship name="modules">
 			<destination>{7d1dbea6-a4fd-46df-8f09-2e3268155494}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{422ab385-6232-4793-920e-f7f0d0281e7b}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{0eb3c871-9d73-4494-8312-ae9d0f789f5c}">
 		<relationship name="effectChain">
@@ -108,6 +111,20 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{0eb3c871-9d73-4494-8312-ae9d0f789f5c}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{422ab385-6232-4793-920e-f7f0d0281e7b}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>154.48816326530613</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{45649f8d-ae86-4e87-bf57-0486e2c35858}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{cb6ec502-6c31-4e6f-b717-97c59914eeb7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{64b4302f-64e0-44cb-bb90-ade90907bcd3}">
@@ -150,7 +167,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -208,7 +224,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

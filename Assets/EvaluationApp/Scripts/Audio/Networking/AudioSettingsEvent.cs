@@ -7,17 +7,19 @@ public class AudioSettingsEvent : RealtimeComponent<AudioSettingsEventModel>
 {
 
     [SerializeField]
-    private AudioSource audioSource;
+    private AudioSource realAudioSource;
 
     [SerializeField]
-    private AudioOutputChannelRouter channelSplitter;
+    private AudioOutputChannelRouter realChannelSplitter;
+
+    [SerializeField]
+    private VirtualSpeakerSwitcher spatializerSwitch;
 
     private bool isVR;
 
     void Start()
     {
-        audioSource = FindAnyObjectByType<AudioSource>();
-        channelSplitter = audioSource.GetComponent<AudioOutputChannelRouter>();
+        realChannelSplitter = realAudioSource.GetComponent<AudioOutputChannelRouter>();
         isVR = FindAnyObjectByType<GameManager>().IsVR;
     }
 
@@ -34,19 +36,32 @@ public class AudioSettingsEvent : RealtimeComponent<AudioSettingsEventModel>
     }
 
     // A public method we can use to fire the event
-    public void SetSettings(int speakerID, int useRealSpeaker) {
-        model.FireEvent(speakerID, useRealSpeaker);
+    public void SetSettings(int speakerID, int useRealSpeaker, int spatializerID) {
+        model.FireEvent(speakerID, useRealSpeaker, spatializerID);
     }
 
     // Called whenever our event fires
-    private void SettingsSet(int speakerID, int realAudio) {
+    private void SettingsSet(int speakerID, int realAudio, int spatializerID) {
         // Tell the particle system to trigger an explosion in response to the event
-        if(channelSplitter!=null) channelSplitter.SetOutputChannel(speakerID);
-        
-        if(isVR)
-            audioSource.volume = realAudio!=0 ? 0 : 1;
+        if(realChannelSplitter!=null) realChannelSplitter.SetOutputChannel(speakerID);
+        if (spatializerSwitch != null) spatializerSwitch.SetSpeaker(speakerID, spatializerID,0);
+
+        isVR = GameManager.Instance.IsVR;
+
+        if (isVR)
+        {
+            if(realAudioSource != null) realAudioSource.volume = 0;
+            if (realAudioSource != null) realChannelSplitter.SetOutputChannel(speakerID);
+            if (spatializerSwitch != null) spatializerSwitch.SetMute(realAudio != 0);
+            if (spatializerSwitch != null) spatializerSwitch.SetSpeaker(speakerID, spatializerID);
+            
+        }
         else
-            audioSource.volume = realAudio!=0 ? 1 : 0;
+        {
+            if (realAudioSource != null) realAudioSource.volume = realAudio != 0 ? 1 : 0;
+            if (realAudioSource != null) realChannelSplitter.SetOutputChannel(speakerID);
+            if (spatializerSwitch != null) spatializerSwitch.SetMute(true);
+        }
 
         if(realAudio==0)
             Debug.Log("Play virtual audio ");

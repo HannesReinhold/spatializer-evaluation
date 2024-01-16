@@ -41,7 +41,7 @@ public class AudioSync : MonoBehaviour
 
     public void PlaySound()
     {
-        trigger.Emit();
+        //trigger.Emit();
 
     }
 
@@ -65,7 +65,7 @@ public class AudioSync : MonoBehaviour
 
     public void SetSpeaker(int speakerID)
     {
-        settings.SetSettings(speakerID, lastReal ? 1 : 0);
+        //settings.SetSettings(speakerID, lastReal ? 1 : 0);
         Debug.Log(settings);
         lastSpeakerID = speakerID;
 
@@ -79,7 +79,7 @@ public class AudioSync : MonoBehaviour
 
     public void SetRealSound(bool real)
     {
-        settings.SetSettings(lastSpeakerID, real ? 1 : 0);
+        //settings.SetSettings(lastSpeakerID, real ? 1 : 0);
         lastReal = real;
     }
 }

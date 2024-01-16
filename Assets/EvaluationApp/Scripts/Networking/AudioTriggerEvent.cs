@@ -9,7 +9,9 @@ public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
 
     [SerializeField]
     private AudioSource audioSource;
-    public AudioSync sync;
+    public VirtualSpeakerSwitcher virtualSwitcher;
+
+    public List<AudioClip> clipList;
     bool on = false;
 
     void Start()
@@ -33,26 +35,32 @@ public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
     }
 
     // A public method we can use to fire the event
-    public void Emit(int start)
+    public void Emit(int start, int fileID)
     {
-        model.FireEvent(0,start);
+        model.FireEvent(0,start, fileID);
     }
 
     // Called whenever our event fires
-    private void EventDidFire(int senderID)
+    private void EventDidFire(int senderID, int start, int fileID)
     {
         on = !on;
-        if (on)
+        if (start!=0)
         {
-            audioSource.time = 0;
-            audioSource.Play();
-            sync.StopSpatializer();
+            if(audioSource != null) audioSource.time = 0;
+            if (audioSource != null) audioSource.clip = clipList[fileID];
+            if (audioSource != null) audioSource.Play();
+            
+            if(virtualSwitcher != null) virtualSwitcher.SetAudioID(fileID);
+            if (virtualSwitcher != null) virtualSwitcher.Play();
+            Debug.Log(fileID);
         }
         else
         {
-            audioSource.Stop();
-            sync.PlaySpatializer();
+            if (audioSource != null) audioSource.Stop();
+            if (virtualSwitcher != null) virtualSwitcher.Stop();
         }
 
     }
+
+    
 }

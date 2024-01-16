@@ -129,6 +129,7 @@
                 "maxValue": "Very Similar",
                 "minNumber": 0,
                 "maxNumber": 100,
+                "fileID": 0,
                 "evaluations": [
                     {
                         "evaluationID": 0,
@@ -141,14 +142,14 @@
                         "evaluationID": 1,
                         "baseSpatializerID": 0,
                         "comparisonSpatializerID": 2,
-                        "speakerID": 4,
+                        "speakerID": 0,
                         "value": 50
                     },
                     {
                         "evaluationID": 2,
                         "baseSpatializerID": 0,
                         "comparisonSpatializerID": 3,
-                        "speakerID": 6,
+                        "speakerID": 1,
                         "value": 50
                     },
                     {
@@ -170,6 +171,7 @@
                 "maxValue": "Very Similar",
                 "minNumber": 0,
                 "maxNumber": 100,
+                "fileID": 1,
                 "evaluations": [
                     {
                         "evaluationID": 0,
@@ -211,6 +213,7 @@
                 "maxValue": "Very Similar",
                 "minNumber": 0,
                 "maxNumber": 100,
+                "fileID": 3,
                 "evaluations": [
                     {
                         "evaluationID": 0,
@@ -252,6 +255,7 @@
                 "maxValue": "Very Realistic",
                 "minNumber": 0,
                 "maxNumber": 100,
+                "fileID": 4,
                 "evaluations": [
                     {
                         "evaluationID": 0,

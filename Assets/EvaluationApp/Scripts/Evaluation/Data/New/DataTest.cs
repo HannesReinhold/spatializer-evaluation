@@ -33,11 +33,11 @@ public class DataTest : MonoBehaviour
         speakerInfo.Add(new SpeakerInfo(5, new UnityEngine.Vector3(), new Quaternion()));
 
         // subjective eval data
-        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(0, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
-        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(1, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
-        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(2, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
-        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(3, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
-        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(4, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
+        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(0,0, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
+        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(1,1, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
+        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(2,2, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
+        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(3,3, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
+        subjectiveEvaluationPartData.Add(new SubjectiveEvaluationPartData(4,4, "Directivity", "", "How close in terms of directivity does the spatializer compare to the real world?", "Directivity", "Very Different", "Very Similar", 0, 100));
 
 
     }
