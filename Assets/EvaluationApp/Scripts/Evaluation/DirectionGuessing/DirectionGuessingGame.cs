@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DirectionGuessingGame : MonoBehaviour
 {
@@ -31,10 +32,16 @@ public class DirectionGuessingGame : MonoBehaviour
     public bool tutorial = false;
 
 
-    private List<Vector3> guessList = new List<Vector3>();
+    private List<DirectionGuessingData> guessList = new List<DirectionGuessingData>();
 
 
     private int currentSpatializer = 0;
+
+
+
+    private DirectionGameData gameData;
+
+   
 
 
     void OnEnable()
@@ -44,11 +51,20 @@ public class DirectionGuessingGame : MonoBehaviour
         //GUIAudioManager.SetAmbientVolume(0.1f);
     }
 
+    private void Start()
+    {
+        gameData = GameManager.Instance.dataManager.directionGameData;
+        numRounds = gameData.rounds.Count;
+    }
+
     public void OnStartClick()
     {
         StartGame();
-        controllerTransform = GameObject.Find("RightHandAnchor").transform;
-        //controllerTransform = transform;
+        GameObject controller = GameObject.Find("RightHandAnchor");
+        if(controller != null) controllerTransform = controller.transform;
+        else controllerTransform = Camera.main.transform;
+
+
         GUIAudioManager.SetAmbientVolume(0.1f);
     }
 
@@ -59,6 +75,7 @@ public class DirectionGuessingGame : MonoBehaviour
     {
         // Shoot if pressed
         if (enableInput && target.activeSelf && OVRInput.GetDown(OVRInput.Button.One)) Shoot();
+        if (enableInput && target.activeSelf && Mouse.current.leftButton.wasPressedThisFrame) Shoot();
 
     }
 
@@ -89,6 +106,8 @@ public class DirectionGuessingGame : MonoBehaviour
 
     public void OnFinishClick()
     {
+        GameManager.Instance.SaveData();
+
         finishWindow.Close();
         GUIAudioManager.SetAmbientVolume(1);
     }
@@ -111,7 +130,11 @@ public class DirectionGuessingGame : MonoBehaviour
     /// </summary>
     private void StartRound()
     {
-        RespawnTarget();
+        RoundData roundData = gameData.rounds[currentRound];
+        Vector3 respawnPosition = gameData.positions[currentRound];
+        int spatializerID = roundData.spatializerID;
+
+        RespawnTarget(respawnPosition, spatializerID);
         EnableControllerInput();
 
         startTime = Time.time;
@@ -137,11 +160,14 @@ public class DirectionGuessingGame : MonoBehaviour
     /// <summary>
     /// Spawn the target at a new random direction
     /// </summary>
-    void RespawnTarget()
+    void RespawnTarget(Vector3 position, int spatializerID)
     {
+        currentSpatializer = spatializerID;
         // select a random position
-        Vector2 dir = Random.insideUnitCircle.normalized;
-        Vector3 position = new Vector3(controllerTransform.position.x,0,controllerTransform.position.z) +new Vector3(dir.x,0.6f,dir.y)*3;
+        //Vector2 dir = Random.insideUnitCircle.normalized;
+        //Vector3 position = new Vector3(controllerTransform.position.x,0,controllerTransform.position.z) +new Vector3(dir.x,0.6f,dir.y)*3;
+
+
         target.transform.position = position;
         target.SetActive(true);
 
@@ -175,6 +201,7 @@ public class DirectionGuessingGame : MonoBehaviour
     /// </summary>
     private void PlayAudioCue()
     {
+        Debug.Log("Playing spatializer "+currentSpatializer+" at "+target.transform.position);
         switch (currentSpatializer) {
             case 1: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
             case 2: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
@@ -230,7 +257,17 @@ public class DirectionGuessingGame : MonoBehaviour
 
         float elapsedTime = Time.time - startTime;
 
-        guessList.Add(new Vector3(azimuth,elevation,elapsedTime));
+
+        DirectionGuessingData data = new DirectionGuessingData(currentRound);
+        data.spatializerID = currentSpatializer;
+        data.timeToGuessDirection = elapsedTime;
+        data.sourceDirection = actualDirection;
+        data.guessedDirection = guessedDirection;
+        data.azimuthDifference = azimuth;
+        data.elevationDifference = elevation;
+
+
+        GameManager.Instance.dataManager.currentSessionData.directionGuessingResults.Add(data);
 
 
         currentRound++;

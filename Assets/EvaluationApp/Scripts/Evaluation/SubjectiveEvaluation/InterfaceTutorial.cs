@@ -17,11 +17,11 @@ public class InterfaceTutorial : MonoBehaviour
 
     public void Open()
     {
-        Invoke("Open1", 3);
-        Invoke("Open2", 9);
-        Invoke("Open3", 14);
-        Invoke("Open4", 19);
-        Invoke("Open5", 24);
+        Invoke("Open1", 5);
+        Invoke("Open2", 10);
+        Invoke("Open3", 15);
+        Invoke("Open4", 20);
+        Invoke("Open5", 25);
         Invoke("Open6", 30);
     }
 

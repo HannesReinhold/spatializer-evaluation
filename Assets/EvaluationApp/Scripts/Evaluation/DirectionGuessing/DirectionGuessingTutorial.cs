@@ -26,9 +26,15 @@ public class DirectionGuessingTutorial : MonoBehaviour
         
     }
 
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         if (enableInput && OVRInput.GetDown(OVRInput.Button.One)) Shoot();
+        if (enableInput && target.activeSelf && Mouse.current.leftButton.wasPressedThisFrame) Shoot();
     }
 
     public void StartTutorial()

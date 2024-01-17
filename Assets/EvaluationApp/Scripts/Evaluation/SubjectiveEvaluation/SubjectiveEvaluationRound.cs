@@ -52,7 +52,10 @@ public class SubjectiveEvaluationRound : MonoBehaviour
 
     public void SaveRound()
     {
+        roundData.value = ratingSlider.value;
+        GameManager.Instance.dataManager.currentSessionData.subjectiveEvaluationResults.Add(roundData);
         audioSwitch.Stop();
+        GameManager.Instance.SaveData();
     }
 
     public void StartRound(bool nextAspect)

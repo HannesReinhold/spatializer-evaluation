@@ -26,4 +26,5 @@ public class MainIntroductionManager : MonoBehaviour
         eventList[i].SetActive(true);
     }
 
+
 }

@@ -17,9 +17,15 @@ public class GameManager : MonoBehaviour
     public GameObject directionGuessingObject;
 
 
-    public bool hasCompletedIntroduction = false;
-    public bool hasCompletedSubjectiveEvaluation = false;
-    public bool hasCompletedDirectionGuessing = false;
+    public enum EvaluationState
+    {
+        Introduction,
+        SubjectiveEvaluation,
+        DirectionGuessing,
+        Complete
+    }
+
+    public EvaluationState evaluationState = 0;
 
     public List<GameObject> VRStuff;
     public List<GameObject> NonVRStuff;
@@ -99,15 +105,29 @@ public class GameManager : MonoBehaviour
         dataManager.InitializeSession();
 
 
-        introductionObject.SetActive(true);
-        subjectiveObject.SetActive(false);
-        directionGuessingObject.SetActive(false);
+        switch(evaluationState)
+        {
+            case EvaluationState.Introduction:
+                StartIntroduction(); break;
+            case EvaluationState.SubjectiveEvaluation:
+                StartSubjectiveEvaluation(); break;
+            case EvaluationState.DirectionGuessing: 
+                StartDirectionGuessing(); break;
+            default: break;
+        }
 
     }
 
     public void InitializeGame()
     {
 
+    }
+
+    public void StartIntroduction()
+    {
+        introductionObject.SetActive(true);
+        subjectiveObject.SetActive(false);
+        directionGuessingObject.SetActive(false);
     }
 
     public void StartSubjectiveEvaluation()
@@ -125,6 +145,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void FinishSession()
+    {
+        SaveData();
+    }
+
+    public void SaveData()
     {
         dataManager.SaveSession();
     }
