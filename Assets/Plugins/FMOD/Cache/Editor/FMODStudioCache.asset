@@ -132,6 +132,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &-4602329563430224600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DirectionGame/HintOculus
+  m_EditorClassIdentifier: 
+  Path: event:/DirectionGame/HintOculus
+  Guid:
+    Data1: -1272315626
+    Data2: 1155795682
+    Data3: 358162325
+    Data4: 905312367
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &-4560415425514819377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +186,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1850
+--- !u!114 &-3768666669744667036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DirectionGame/HintSteam
+  m_EditorClassIdentifier: 
+  Path: event:/DirectionGame/HintSteam
+  Guid:
+    Data1: -88364426
+    Data2: 1081428025
+    Data3: 442253740
+    Data4: 771646228
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &-3191591876786134200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,12 +282,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638410128029141116
+  lastModified: 638411067255181672
   FileSizes:
   - Name: Desktop
-    Value: 2016
+    Value: 2158
   - Name: Mobile
-    Value: 2016
+    Value: 2158
   Exists: 1
 --- !u!114 &-2102196907736683965
 MonoBehaviour:
@@ -411,13 +465,16 @@ MonoBehaviour:
   - {fileID: 5490321682857335179}
   - {fileID: 4992244327266201271}
   - {fileID: -7816188385489512328}
+  - {fileID: -4602329563430224600}
+  - {fileID: -3768666669744667036}
+  - {fileID: 2351999792461146557}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638410128029141116
+  cacheTime: 638411067255181672
   cacheVersion: 131609
 --- !u!114 &1345801562066976928
 MonoBehaviour:
@@ -446,6 +503,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 154488
+--- !u!114 &2351999792461146557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DirectionGame/HintResonance
+  m_EditorClassIdentifier: 
+  Path: event:/DirectionGame/HintResonance
+  Guid:
+    Data1: 797709285
+    Data2: 1146701144
+    Data3: 562566021
+    Data4: 149155074
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &2397608018857599529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,12 +572,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410128029121114
+  lastModified: 638411067255161663
   FileSizes:
   - Name: Desktop
-    Value: 2208032
+    Value: 2211520
   - Name: Mobile
-    Value: 5156448
+    Value: 5159936
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:

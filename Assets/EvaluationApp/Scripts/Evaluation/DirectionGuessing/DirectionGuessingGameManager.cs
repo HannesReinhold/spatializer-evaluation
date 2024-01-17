@@ -39,6 +39,7 @@ public class DirectionGuessingGameManager : MonoBehaviour
     {
         ResetAll();
         introduction.SetActive(true);
+        GUIAudioManager.SetAmbientVolume(0.5f);
     }
 
     public void OpenTutorial()

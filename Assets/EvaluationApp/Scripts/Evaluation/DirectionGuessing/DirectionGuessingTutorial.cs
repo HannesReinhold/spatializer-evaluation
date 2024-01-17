@@ -20,10 +20,15 @@ public class DirectionGuessingTutorial : MonoBehaviour
     private void OnEnable()
     {
         roundID = 0;
-        GUIAudioManager.SetAmbientVolume(0.1f);
         Invoke("StartTutorial", 2);
         target.SetActive(false);
-        
+
+        FMOD.Studio.Bus bus = FMODUnity.RuntimeManager.GetBus("bus:/MainSounds");
+        bus.setVolume(GameManager.Instance.dataManager.currentSessionData.volume);
+        GUIAudioManager.SetAmbientVolume(0f);
+
+
+
     }
 
     private void Start()

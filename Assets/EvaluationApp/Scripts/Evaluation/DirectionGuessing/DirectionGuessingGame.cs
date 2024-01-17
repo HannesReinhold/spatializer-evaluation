@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class DirectionGuessingGame : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class DirectionGuessingGame : MonoBehaviour
     public PopupWindow finishWindow;
     public GameObject countdown;
 
+    public AudioSource source;
+    public AudioOutputChannelRouter outputChannelRouter;
+    public AudioClip clip;
+
     private Vector3 guessedDirection;
 
     private int currentRound = 0;
@@ -33,12 +38,8 @@ public class DirectionGuessingGame : MonoBehaviour
 
 
     private List<DirectionGuessingData> guessList = new List<DirectionGuessingData>();
-
-
     private int currentSpatializer = 0;
-
-
-
+    private int currentPositionID = 0;
     private DirectionGameData gameData;
 
    
@@ -49,6 +50,11 @@ public class DirectionGuessingGame : MonoBehaviour
         //StartGame();
         //controllerTransform = GameObject.Find("RightHandAnchor").transform;
         //GUIAudioManager.SetAmbientVolume(0.1f);
+
+        FMOD.Studio.Bus bus = FMODUnity.RuntimeManager.GetBus("bus:/MainSounds");
+        //bus.setVolume(GameManager.Instance.dataManager.currentSessionData.volume);
+        bus.setVolume(1);
+        
     }
 
     private void Start()
@@ -65,7 +71,7 @@ public class DirectionGuessingGame : MonoBehaviour
         else controllerTransform = Camera.main.transform;
 
 
-        GUIAudioManager.SetAmbientVolume(0.1f);
+        GUIAudioManager.SetAmbientVolume(0f);
     }
 
     
@@ -101,15 +107,14 @@ public class DirectionGuessingGame : MonoBehaviour
         lineRendererGuessed.gameObject.SetActive(false);
         lineRendererActual.gameObject.SetActive(false);
         DisableControllerInput();
-        GUIAudioManager.SetAmbientVolume(0.1f);
+        GUIAudioManager.SetAmbientVolume(0.5f);
     }
 
     public void OnFinishClick()
     {
         GameManager.Instance.SaveData();
-
+        FinishGame();
         finishWindow.Close();
-        GUIAudioManager.SetAmbientVolume(1);
     }
 
     /// <summary>
@@ -117,6 +122,7 @@ public class DirectionGuessingGame : MonoBehaviour
     /// </summary>
     public void StartCountdown()
     {
+        GUIAudioManager.SetAmbientVolume(0.0f);
         startWindow.Close();
         Invoke("StartRound", countdownTime);
         // hide target
@@ -133,6 +139,7 @@ public class DirectionGuessingGame : MonoBehaviour
         RoundData roundData = gameData.rounds[currentRound];
         Vector3 respawnPosition = gameData.positions[currentRound];
         int spatializerID = roundData.spatializerID;
+        currentPositionID = roundData.positionID;
 
         RespawnTarget(respawnPosition, spatializerID);
         EnableControllerInput();
@@ -203,13 +210,18 @@ public class DirectionGuessingGame : MonoBehaviour
     {
         Debug.Log("Playing spatializer "+currentSpatializer+" at "+target.transform.position);
         switch (currentSpatializer) {
-            case 1: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
-            case 2: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
-            case 3: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
-            case 4: FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Open", target.transform.position); break;
-
+            case 0: PlayRealAudio(currentPositionID); break;
+            case 1: FMODUnity.RuntimeManager.PlayOneShot("event:/DirectionGame/HintOculus", target.transform.position); break;
+            case 2: FMODUnity.RuntimeManager.PlayOneShot("event:/DirectionGame/Hintresonance", target.transform.position); break;
+            case 3: FMODUnity.RuntimeManager.PlayOneShot("event:/DirectionGame/HintSteam", target.transform.position); break;
+            case 4: FMODUnity.RuntimeManager.PlayOneShot("event:/DirectionGame/HintOculus", target.transform.position); break;
         }
+    }
 
+    private void PlayRealAudio(int channelID)
+    {
+        outputChannelRouter.SetOutputChannel(channelID);
+        source.PlayOneShot(clip);
     }
 
     /// <summary>

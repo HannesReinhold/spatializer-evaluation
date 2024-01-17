@@ -32,6 +32,7 @@ public static class GUIAudioManager
     public static void SetAmbientVolume(float v)
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientVolume",v);
+        Debug.Log("Set ambient vol: "+v);
     }
 
     public static void PlaySlideOpen(Vector3 pos)
