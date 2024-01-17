@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     //public GameObject DirectionGuessingPrefab;
 
     public bool IsVR = true;
+    public bool allowEvaluationNonVR = false;
 
 
     public GameObject introductionObject;
@@ -70,6 +71,8 @@ public class GameManager : MonoBehaviour
             {
                 g.SetActive(!IsVR);
             }
+
+            if (allowEvaluationNonVR) VRStuff[VRStuff.Count - 1].SetActive(true);
             
 
 

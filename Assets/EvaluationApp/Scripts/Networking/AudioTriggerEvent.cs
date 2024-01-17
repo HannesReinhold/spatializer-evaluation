@@ -16,7 +16,6 @@ public class AudioTriggerEvent : RealtimeComponent<AudioTriggerEventModel>
 
     void Start()
     {
-        audioSource = FindAnyObjectByType<AudioSource>();
     }
 
     // When we connect to a room server, we'll be given an instance of our model to work with.
