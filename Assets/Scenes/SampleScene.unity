@@ -3005,6 +3005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CalibrationStation (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1900933472956330624, guid: 837da04fdfb3ba643aa94f69f01eccda, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1900933472956330625, guid: 837da04fdfb3ba643aa94f69f01eccda, type: 3}
       propertyPath: calibrationStationType
       value: 0
@@ -5144,6 +5148,18 @@ PrefabInstance:
     - target: {fileID: 977069288928241096, guid: 9001e872bc0856f479d8bc86f405915d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788323174573966156, guid: 9001e872bc0856f479d8bc86f405915d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788323174573966156, guid: 9001e872bc0856f479d8bc86f405915d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788323174573966156, guid: 9001e872bc0856f479d8bc86f405915d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039216
       objectReference: {fileID: 0}
     - target: {fileID: 1872880242644187840, guid: 9001e872bc0856f479d8bc86f405915d, type: 3}
       propertyPath: openDelay
