@@ -24,6 +24,8 @@ public class SubjectiveEvaluationManager : MonoBehaviour
 
     FMOD.Studio.Bus bus;
 
+    private int currentEmergingSpeaker = 0;
+
     private void Start()
     {
         bus = FMODUnity.RuntimeManager.GetBus("bus:/Ambience");
@@ -107,52 +109,29 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     int currentSpeaker = 0;
     public void EmergeSpeakers()
     {
-        Invoke("EmergeSpeaker1",1);
-        Invoke("EmergeSpeaker2", 2);
-        Invoke("EmergeSpeaker3", 3);
-        Invoke("EmergeSpeaker4", 4);
-        Invoke("EmergeSpeaker5", 5);
-
+        
+        Invoke("EmergeSpeaker",1);
+        Invoke("EmergeSpeaker", 2);
+        Invoke("EmergeSpeaker", 3);
+        Invoke("EmergeSpeaker", 4);
+        Invoke("EmergeSpeaker", 5);
+        Invoke("EmergeSpeaker", 6);
+        
         Invoke("DisableHighlighting",8);
     }
 
     public void DisableHighlighting()
     {
-        //speakers[]
         for(int i=0; i<speakers.Count; i++)
         {
             speakers[i].GetComponentInChildren<Hint>().CloseHint();
         }
     }
 
-    private void EmergeSpeaker1()
+    private void EmergeSpeaker()
     {
-        LeanTween.moveY(speakers[0], 0, 1).setEaseOutCubic();
-
-    }
-
-    private void EmergeSpeaker2()
-    {
-        LeanTween.moveY(speakers[1], 0, 1).setEaseOutCubic();
-
-    }
-
-    private void EmergeSpeaker3()
-    {
-        LeanTween.moveY(speakers[2], 0, 1).setEaseOutCubic();
-
-    }
-
-    private void EmergeSpeaker4()
-    {
-        LeanTween.moveY(speakers[3], 0, 1).setEaseOutCubic();
-
-    }
-
-    private void EmergeSpeaker5()
-    {
-        LeanTween.moveY(speakers[4], 0, 1).setEaseOutCubic();
-
+        LeanTween.moveY(speakers[currentEmergingSpeaker], 0, 1).setEaseOutCubic();
+        currentEmergingSpeaker++;
     }
 
 }
