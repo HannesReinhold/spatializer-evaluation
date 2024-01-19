@@ -596,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hint
       objectReference: {fileID: 0}
+    - target: {fileID: 3878500773579413911, guid: bac0302b0c5e18e4e8dc868d4c2cd0c9, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 7803654647716052479}
     - target: {fileID: 7405933070842688842, guid: bac0302b0c5e18e4e8dc868d4c2cd0c9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -609,5 +613,10 @@ PrefabInstance:
 --- !u!4 &4957448640435192978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2966605826939529348, guid: bac0302b0c5e18e4e8dc868d4c2cd0c9, type: 3}
+  m_PrefabInstance: {fileID: 7919550317815376918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7803654647716052479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 120404784758346217, guid: bac0302b0c5e18e4e8dc868d4c2cd0c9, type: 3}
   m_PrefabInstance: {fileID: 7919550317815376918}
   m_PrefabAsset: {fileID: 0}

@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7957493677137582432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Luigi 2
+  m_EditorClassIdentifier: 
+  Path: event:/Luigi 2
+  Guid:
+    Data1: -69506251
+    Data2: 1221987623
+    Data3: -1828690296
+    Data4: 1595408751
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4989
 --- !u!114 &-7816188385489512328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +159,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &-4950036635894153462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cues/Hint1
+  m_EditorClassIdentifier: 
+  Path: event:/Cues/Hint1
+  Guid:
+    Data1: -332999644
+    Data2: 1333372061
+    Data3: -1205412966
+    Data4: -416339619
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
 --- !u!114 &-4602329563430224600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +240,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1850
+--- !u!114 &-4197088649259704129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cues/CueLoop1
+  m_EditorClassIdentifier: 
+  Path: event:/Cues/CueLoop1
+  Guid:
+    Data1: -1865770858
+    Data2: 1272962127
+    Data3: -1542511486
+    Data4: -2116989383
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4076
 --- !u!114 &-3768666669744667036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,12 +363,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638411067255181672
+  lastModified: 638412880673201092
   FileSizes:
   - Name: Desktop
-    Value: 2158
+    Value: 2460
   - Name: Mobile
-    Value: 2158
+    Value: 2460
   Exists: 1
 --- !u!114 &-2102196907736683965
 MonoBehaviour:
@@ -468,14 +549,47 @@ MonoBehaviour:
   - {fileID: -4602329563430224600}
   - {fileID: -3768666669744667036}
   - {fileID: 2351999792461146557}
+  - {fileID: -4950036635894153462}
+  - {fileID: -4197088649259704129}
+  - {fileID: 6685084454880826517}
+  - {fileID: 7060869454451116517}
+  - {fileID: -7957493677137582432}
+  - {fileID: 1293834194866312430}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638411067255181672
+  cacheTime: 638412880673201092
   cacheVersion: 131609
+--- !u!114 &1293834194866312430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Luigi 3
+  m_EditorClassIdentifier: 
+  Path: event:/Luigi 3
+  Guid:
+    Data1: 1742479198
+    Data2: 1196630181
+    Data3: 345331628
+    Data4: 524719530
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4989
 --- !u!114 &1345801562066976928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,12 +686,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638411067255161663
+  lastModified: 638412880673171095
   FileSizes:
   - Name: Desktop
-    Value: 2211520
+    Value: 2342144
   - Name: Mobile
-    Value: 5159936
+    Value: 5626912
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -795,6 +909,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7480
+--- !u!114 &6685084454880826517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemy1
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy1
+  Guid:
+    Data1: 1104176038
+    Data2: 1242941889
+    Data3: 1844306583
+    Data4: -103958655
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3700
+--- !u!114 &7060869454451116517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Luigi
+  m_EditorClassIdentifier: 
+  Path: event:/Luigi
+  Guid:
+    Data1: -1162039069
+    Data2: 1336987319
+    Data3: 1108570256
+    Data4: 164259489
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4989
 --- !u!114 &7107621948793415509
 MonoBehaviour:
   m_ObjectHideFlags: 0

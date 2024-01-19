@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,7 +52,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
             StartRound(); 
             roundID++;
         }
-        GUIAudioManager.SetAmbientVolume(0);
+        //GUIAudioManager.SetAmbientVolume(0);
 
 
     }
@@ -66,6 +67,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     public void StartRound()
     {
         //subjectiveEvalInterface.ShowNextEvaluation(partID, roundID);
+        GUIAudioManager.SetAmbientVolume(0);
         numParts = GameManager.Instance.dataManager.spatializerData.subjectiveEvaluationData.evaluationParts.Count;
         roundManager.UpdateInterface(GameManager.Instance.dataManager.spatializerData.subjectiveEvaluationData.evaluationParts[partID], roundID);
         tutorial.SetActive(false);
@@ -131,6 +133,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     private void EmergeSpeaker()
     {
         LeanTween.moveY(speakers[currentEmergingSpeaker], 0, 1).setEaseOutCubic();
+        speakers[currentEmergingSpeaker].GetComponentInChildren<Hint>().OpenHint();
         currentEmergingSpeaker++;
     }
 
