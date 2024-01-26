@@ -22,6 +22,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{67061e30-0d0c-49b0-a66f-751b9fce74c9}" />
 	<object class="PluginEffect" id="{e2e0b644-6d56-4077-a861-0fe2bc477be2}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<relationship name="plugin">
 			<destination>{3ff52a4e-c0f7-4bbe-831d-33f2324df988}</destination>
 		</relationship>
@@ -212,7 +215,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

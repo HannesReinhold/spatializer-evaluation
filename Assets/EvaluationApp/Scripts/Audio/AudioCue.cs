@@ -24,7 +24,7 @@ public class AudioCue : MonoBehaviour
         Vector3 direction = (transform.position - camTransform.position).normalized;
         float dot = Vector3.Dot(camTransform.forward, direction);
         
-        if (distance < disableRadius && dot < disableDirection)
+        if (distance < disableRadius && Mathf.Abs(1-dot) < disableDirection)
         {
             if (!alreadyDisabled)
             {
@@ -38,6 +38,8 @@ public class AudioCue : MonoBehaviour
             alreadyDisabled = false;
 
         }
+        
+        Debug.Log(dot);
     }
 
     private void DisableHint()

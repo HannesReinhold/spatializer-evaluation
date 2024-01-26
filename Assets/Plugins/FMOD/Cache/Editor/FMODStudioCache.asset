@@ -159,6 +159,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &-5020832022624024911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/KnightWalking/KnightWalkingVolume
+  m_EditorClassIdentifier: 
+  Name: KnightWalkingVolume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1448470370
+    data2: 2867541272
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4950036635894153462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,12 +387,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638412880673201092
+  lastModified: 638416999439318596
   FileSizes:
   - Name: Desktop
-    Value: 2460
+    Value: 2740
   - Name: Mobile
-    Value: 2460
+    Value: 2740
   Exists: 1
 --- !u!114 &-2102196907736683965
 MonoBehaviour:
@@ -478,6 +502,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 154488
+--- !u!114 &-398696042177594502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/KnightWalking
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/KnightWalking
+  Guid:
+    Data1: 2122901025
+    Data2: 1282398200
+    Data3: -1795989882
+    Data4: 449321719
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5020832022624024911}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11067
 --- !u!114 &-203713473106778439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,13 +607,18 @@ MonoBehaviour:
   - {fileID: 7060869454451116517}
   - {fileID: -7957493677137582432}
   - {fileID: 1293834194866312430}
+  - {fileID: -398696042177594502}
+  - {fileID: 8292656627758043615}
+  - {fileID: 6173553661710098283}
+  - {fileID: 2776322085912245409}
+  - {fileID: 2659625167712232694}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638412880673201092
+  cacheTime: 638416999439318596
   cacheVersion: 131609
 --- !u!114 &1293834194866312430
 MonoBehaviour:
@@ -671,6 +728,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 482
+--- !u!114 &2659625167712232694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/SwordSwing/Swing4
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/SwordSwing/Swing4
+  Guid:
+    Data1: -1474304295
+    Data2: 1165286280
+    Data3: -18826859
+    Data4: 603305943
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2481
+--- !u!114 &2776322085912245409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/SwordSwing/Swing2
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/SwordSwing/Swing2
+  Guid:
+    Data1: 1345941639
+    Data2: 1113910241
+    Data3: -985604701
+    Data4: 657169653
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2481
 --- !u!114 &3001012958590905968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,12 +797,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638412880673171095
+  lastModified: 638416999439278737
   FileSizes:
   - Name: Desktop
-    Value: 2342144
+    Value: 2584192
   - Name: Mobile
-    Value: 5626912
+    Value: 6185152
   Exists: 1
 --- !u!114 &3491255142867715852
 MonoBehaviour:
@@ -882,6 +993,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1906
+--- !u!114 &6173553661710098283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/SwordSwing/Swing3
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/SwordSwing/Swing3
+  Guid:
+    Data1: -154271632
+    Data2: 1224995080
+    Data3: -2026874702
+    Data4: 1724470065
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2481
 --- !u!114 &6175650532950628365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,6 +1155,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &8292656627758043615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/SwordSwing/Swing1
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/SwordSwing/Swing1
+  Guid:
+    Data1: 1873227781
+    Data2: 1207142831
+    Data3: -273721683
+    Data4: -1312937568
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2481
 --- !u!114 &9094421266942062038
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,8 +20,17 @@ public class StrikeEnemy : MonoBehaviour
     private Vector3 lastPosition = Vector3.zero;
     private bool alreadySwung = false;
 
+    public MainIntroductionManager introductionManager;
+    public WindowManager windowManager;
+
+    private GameObject laser;
+
+    public PopupWindow completeWindow;
+    public PopupWindow warningWindow;
+
     private void Start()
     {
+        
         GameObject anchor = GameObject.Find("RightHandAnchor");
         if (anchor != null) rightControllerTransform = anchor.transform;
         rend = sword.GetComponentInChildren<Renderer>();
@@ -31,13 +40,14 @@ public class StrikeEnemy : MonoBehaviour
 
         lastPosition = rightControllerTransform.position;
         source = sword.GetComponent<AudioSource>();
-        source.clip = clip; 
+        source.clip = clip;
 
         
     }
 
     private void OnEnable()
     {
+        completeWindow.gameObject.SetActive(false);
         Invoke("EquipSword", 3);
     }
 
@@ -80,8 +90,36 @@ public class StrikeEnemy : MonoBehaviour
     {
         sword.SetActive(true);
         equipped = true;
-        GameObject laser = GameObject.Find("LaserPointer");
+        laser = GameObject.Find("LaserPointer");
         laser.SetActive(false);
+    }
+
+    public void OpenComplete()
+    {
+        completeWindow.gameObject.SetActive(true);
+        warningWindow.Close();
+        completeWindow.transform.position = enemy.transform.position;
+    }
+
+    public void OnKill()
+    {
+        //laser.SetActive(true);
+        sword.SetActive(false);
+
+        Invoke("OpenComplete",0.5f);
+    }
+
+    private void StartNewEvent()
+    {
+
+        //windowManager.NextPage();
+        introductionManager.StartEvent(4);
+    }
+
+    public void OnCompleClick()
+    {
+        completeWindow.Close();
+        Invoke("StartNewEvent",1);
     }
 
 }

@@ -1,4 +1,4 @@
-Library: C:\Users\IXLAB\Documents\GitHub\spatializer-evaluation\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
+Library: D:\Dokumente\Bachelor Medieninformatik\Bachelorarbeit\Repository\spatializer-evaluation\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-14
 --target=ARMV8A_AARCH64
@@ -164,8 +164,8 @@ Library: C:\Users\IXLAB\Documents\GitHub\spatializer-evaluation\Temp\StagingArea
 --compilation-defines=TIMELINE_FRAMEACCURATE
 --compilation-defines=UNITY_ANALYTICS
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\IXLAB\Documents\GitHub\spatializer-evaluation\Temp\Burst
---output=C:\Users\IXLAB\Documents\GitHub\spatializer-evaluation\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
+--temp-folder=D:\Dokumente\Bachelor Medieninformatik\Bachelorarbeit\Repository\spatializer-evaluation\Temp\Burst
+--output=D:\Dokumente\Bachelor Medieninformatik\Bachelorarbeit\Repository\spatializer-evaluation\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 --pdb-search-paths=Temp/ManagedSymbols/
 

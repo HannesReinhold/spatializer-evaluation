@@ -7,10 +7,17 @@ public class MainIntroductionManager : MonoBehaviour
     public List<GameObject> eventList;
     private int currentEvent;
 
+    public PopupWindow additionalInfoWindow;
+
+    public WindowManager windowManager;
+
 
     private void Start()
     {
         ResetEvents();
+        additionalInfoWindow.gameObject.SetActive(false);
+
+        GUIAudioManager.SetAmbientVolume(0.3f);
     }
 
     public void StartSubjectiveEvaluation()
@@ -38,6 +45,19 @@ public class MainIntroductionManager : MonoBehaviour
         {
             e.SetActive(false);
         }
+    }
+
+    public void SetAdditionalInfoWindow(bool visibility)
+    {
+        if (visibility) additionalInfoWindow.gameObject.SetActive(true);
+        if(visibility) additionalInfoWindow.Open();
+        else additionalInfoWindow.Close();
+    }
+
+    public void SetMainWindow(bool visibility)
+    {
+        if (visibility) windowManager.windows[windowManager.currentWindowIndex].GetComponent<PopupWindow>().Open();
+        else windowManager.windows[windowManager.currentWindowIndex].GetComponent<PopupWindow>().Close();
     }
 
 
