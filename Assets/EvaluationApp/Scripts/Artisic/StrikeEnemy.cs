@@ -55,6 +55,8 @@ public class StrikeEnemy : MonoBehaviour
 
     private void Update()
     {
+        if (rightControllerTransform == null) return;
+
         sword.transform.position = rightControllerTransform.position;
         sword.transform.rotation = rightControllerTransform.rotation;
 
@@ -90,8 +92,9 @@ public class StrikeEnemy : MonoBehaviour
     {
         sword.SetActive(true);
         equipped = true;
+
         laser = GameObject.Find("LaserPointer");
-        laser.SetActive(false);
+        if(laser!=null) laser.SetActive(false);
     }
 
     public void OpenComplete()
@@ -107,13 +110,15 @@ public class StrikeEnemy : MonoBehaviour
         sword.SetActive(false);
 
         Invoke("OpenComplete",0.5f);
+        FMODUnity.StudioEventEmitter audio = enemy.GetComponent<FMODUnity.StudioEventEmitter>();    
+        audio.Stop();
     }
 
     private void StartNewEvent()
     {
 
         //windowManager.NextPage();
-        introductionManager.StartEvent(4);
+        introductionManager.StartEvent(2);
     }
 
     public void OnCompleClick()

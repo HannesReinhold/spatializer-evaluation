@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000016F16F30E58 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000025D8925A2A8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,6 +17,8 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
@@ -45,13 +47,13 @@
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
-[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
-[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
@@ -69,15 +71,21 @@
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
-[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
-[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
-[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
-[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
-[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
@@ -103,6 +111,596 @@
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Resonance Audio Listener'
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C851E7028
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BtnClick2', format=5, channels=2, frequency=48000, lengthbytes=800, lengthpcm=88845, pcmblocksize=0, loopstart=0, loopend=88613, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.375214.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C851E9128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Hint', format=5, channels=2, frequency=48000, lengthbytes=20000, lengthpcm=193845, pcmblocksize=0, loopstart=0, loopend=177229, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.275940.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C851E9128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='CueLoop2', format=5, channels=2, frequency=48000, lengthbytes=20320, lengthpcm=195691, pcmblocksize=0, loopstart=0, loopend=177229, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.282898.
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CDB5A8, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CDB5A8
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C80F216F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='KnightWalking', format=5, channels=2, frequency=48000, lengthbytes=137632, lengthpcm=531230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975340.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CDB5A8
+[LOG] SoundI::release                          : KnightWalking (0000025D67CDB5A8)
+[LOG] SoundI::release                          :     KnightWalking (0000025C806A8588)
+[LOG] SoundI::release                          :     KnightWalking (0000025D67CDDC78)
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CDE698, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CDE698
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C80F21330
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='KnightWalking', format=5, channels=2, frequency=48000, lengthbytes=137632, lengthpcm=531230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975340.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CDE698
+[LOG] SoundI::release                          : KnightWalking (0000025D67CDE698)
+[LOG] SoundI::release                          :     KnightWalking (0000025C806A8A68)
+[LOG] SoundI::release                          :     KnightWalking (0000025D67CDC328)
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CE0F18, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CE0F18
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C80806DE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000025D67CE15D8, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Heatbeat', format=5, channels=2, frequency=48000, lengthbytes=148480, lengthpcm=722233, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.369354.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0000025C851E6C08
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CE0F18
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CE15D8
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='whisper5-94457', format=5, channels=2, frequency=48000, lengthbytes=100064, lengthpcm=365184, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.295654.
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C80F21330
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spooky_Low', format=5, channels=2, frequency=48000, lengthbytes=388352, lengthpcm=1840692, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.417908.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CE15D8
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CDDC78, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CDDC78
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000025D67CDE698, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E3BB43630
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='four_voices_whispering-6943', format=5, channels=2, frequency=48000, lengthbytes=147744, lengthpcm=534528, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.273895.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CDDC78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CDE698
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E3BB43C70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='four_voices_whispering_2_wecho-6755', format=5, channels=2, frequency=48000, lengthbytes=266080, lengthpcm=1066752, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.438629.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CDE698
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CE1938, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CE1938
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CE1AE8, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CE1938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CE1AE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CE1AE8
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CDED58, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CDED58
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CDEF08, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CDED58
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CDEF08
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CDEF08
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CEA548, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CEA548
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C87AD9580
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spooky_Mid', format=5, channels=2, frequency=48000, lengthbytes=478784, lengthpcm=1840692, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.352356.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CEA548
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025D67CEA6F8, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025D67CEA6F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025D67CEA6F8
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025C7DA12568, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025C7DA12568
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C87AD9800
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spooky_High', format=5, channels=2, frequency=48000, lengthbytes=489472, lengthpcm=1840692, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.095276.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025C7DA12568
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025C7DA0E548, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025C7DA0E548
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025C7DA0E548
+[LOG] SoundI::release                          : four_voices_whispering-6943 (0000025D67CDDC78)
+[LOG] SoundI::release                          :     four_voices_whispering-6943 (0000025C89A47F38)
+[LOG] SoundI::release                          :     four_voices_whispering-6943 (0000025D67CDED58)
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025C7DA13138, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025C7DA13138
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C80F21AB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='four_voices_whispering-6943', format=5, channels=2, frequency=48000, lengthbytes=147744, lengthpcm=534528, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.273895.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025C7DA13138
+[LOG] SystemI::createSound                     : filename = spatializer-evaluation/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025C7DA10A68, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025C7DA10A68
+[LOG] SystemI::createSoundInternal             :     Create name='spatializer-evaluation/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025C80F216F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 11700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Heatbeat', format=5, channels=2, frequency=48000, lengthbytes=148480, lengthpcm=722233, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.369354.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025C7DA10A68
+[LOG] SoundI::release                          : Spooky_High (0000025C7DA12568)
+[LOG] SoundI::release                          :     Spooky_High (0000025C04FE7998)
+[LOG] SoundI::release                          :     Spooky_High (0000025C7DA0E548)
+[LOG] SoundI::release                          : Spooky_Mid (0000025D67CEA548)
+[LOG] SoundI::release                          :     Spooky_Mid (0000025C04FE74B8)
+[LOG] SoundI::release                          :     Spooky_Mid (0000025D67CEA6F8)
+[LOG] SoundI::release                          : Spooky_Low (0000025D67CE15D8)
+[LOG] SoundI::release                          :     Spooky_Low (0000025C806A8C08)
+[LOG] SoundI::release                          :     Spooky_Low (0000025D67CE1AE8)
+[LOG] SoundI::release                          : Heatbeat (0000025D67CE0F18)
+[LOG] SoundI::release                          :     Heatbeat (0000025C806A8588)
+[LOG] SoundI::release                          :     Heatbeat (0000025D67CE1938)
+[LOG] SoundI::release                          : four_voices_whispering-6943 (0000025C7DA13138)
+[LOG] SoundI::release                          :     four_voices_whispering-6943 (0000025C04FE8018)
+[LOG] SoundI::release                          :     four_voices_whispering-6943 (0000025C7DA13498)
+[LOG] SoundI::release                          : four_voices_whispering_2_wecho-6755 (0000025D67CDE698)
+[LOG] SoundI::release                          :     four_voices_whispering_2_wecho-6755 (0000025C89A485B8)
+[LOG] SoundI::release                          :     four_voices_whispering_2_wecho-6755 (0000025D67CDEF08)
+[LOG] SoundI::release                          : Heatbeat (0000025C7DA10A68)
+[LOG] SoundI::release                          :     Heatbeat (0000025C050962E8)
+[LOG] SoundI::release                          :     Heatbeat (0000025C7DA179C8)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C851E46E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Boing', format=5, channels=2, frequency=48000, lengthbytes=12160, lengthpcm=85263, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.576538.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop6', format=5, channels=2, frequency=48000, lengthbytes=1024, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.213440.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop1', format=5, channels=2, frequency=48000, lengthbytes=928, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.173553.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop4', format=5, channels=2, frequency=48000, lengthbytes=1152, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.213440.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop7', format=5, channels=2, frequency=48000, lengthbytes=1024, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.213440.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop5', format=5, channels=2, frequency=48000, lengthbytes=1088, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.213440.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop3', format=5, channels=2, frequency=48000, lengthbytes=1120, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.197601.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop8', format=5, channels=2, frequency=48000, lengthbytes=992, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.213440.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C7F28CCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Plop2', format=5, channels=2, frequency=48000, lengthbytes=1056, lengthpcm=3761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.179932.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025C7DA0F478, queue head = 0000025CC3FE2808, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025C7DA0F478
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025C7DA0F478
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C88E30828
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WallEmerging1', format=5, channels=2, frequency=48000, lengthbytes=82112, lengthpcm=292153, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.406006.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4743136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 70048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D50BE4EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A2CE3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A2CE3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A2CE4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A2CE4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000025C851E6C08
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WallEmerging2', format=5, channels=2, frequency=48000, lengthbytes=85248, lengthpcm=292153, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.531982.
+[LOG] SoundI::release                          :  (0000025D9C5B01B8)
+[LOG] SoundI::release                          :     MenuOpen2 (0000025C89A48278)
+[LOG] SoundI::release                          :  (0000025D9C5B1D08)
+[LOG] SoundI::release                          :     Hint (0000025C806A9288)
+[LOG] SoundI::release                          :  (0000025D9C5B22C8)
+[LOG] SoundI::release                          :     CueLoop2 (0000025C806A95C8)
+[LOG] SoundI::release                          :  (0000025D9C5B0A58)
+[LOG] SoundI::release                          :     whisper5-94457 (0000025C806A7D68)
+[LOG] SoundI::release                          : ambience1 (0000025C7DA0E6F8)
+[LOG] SoundI::release                          :     ambience1 (0000025C89A47A58)
+[LOG] SoundI::release                          :     ambience1 (0000025C7DA0F478)
+[LOG] SoundI::release                          :  (0000025D9C5B9178)
+[LOG] SoundI::release                          :     Boing (0000025C05096FE8)
+[LOG] SoundI::release                          :  (0000025D89265518)
+[LOG] SoundI::release                          :     Plop1 (0000025C89A47BF8)
+[LOG] SoundI::release                          :  (0000025D89266C18)
+[LOG] SoundI::release                          :     Plop2 (0000025C04FEA678)
+[LOG] SoundI::release                          :  (0000025D892667C8)
+[LOG] SoundI::release                          :     Plop3 (0000025C04FE77F8)
+[LOG] SoundI::release                          :  (0000025D89265AD8)
+[LOG] SoundI::release                          :     Plop4 (0000025C89A48418)
+[LOG] SoundI::release                          :  (0000025D892664E8)
+[LOG] SoundI::release                          :     Plop5 (0000025C04FE7E78)
+[LOG] SoundI::release                          :  (0000025D89266098)
+[LOG] SoundI::release                          :     Plop6 (0000025C05095FA8)
+[LOG] SoundI::release                          :  (0000025D89266208)
+[LOG] SoundI::release                          :     Plop7 (0000025C89A43138)
+[LOG] SoundI::release                          :  (0000025D89266938)
+[LOG] SoundI::release                          :     Plop8 (0000025C04FEB858)
+[LOG] SoundI::release                          :  (0000025D9C5B50C8)
+[LOG] SoundI::release                          :     BtnClick2 (0000025C806A83E8)
+[LOG] SoundI::release                          :  (0000025C7DA47958)
+[LOG] SoundI::release                          :     WallEmerging1 (0000025C806A9768)
+[LOG] SoundI::release                          :  (0000025D9C5B7798)
+[LOG] SoundI::release                          :     WallEmerging2 (0000025C806A8C08)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatial Reverb'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Steam Audio Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Soundfield'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Oculus Spatializer'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Resonance Audio Listener'
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
@@ -112,3 +710,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

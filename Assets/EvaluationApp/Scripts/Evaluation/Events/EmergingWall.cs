@@ -6,6 +6,7 @@ public class EmergingWall : MonoBehaviour
 {
     public ParticleSystem particles;
     public FMODUnity.StudioEventEmitter emitter;
+    public GameObject wallObject;
 
     public float appearTime = 5;
     public float disappearTime = 5;
@@ -13,8 +14,9 @@ public class EmergingWall : MonoBehaviour
 
     public void Appear()
     {
+        wallObject.SetActive(true);
         particles.Play();
-        LeanTween.moveLocalY(gameObject,wallHeight,appearTime);
+        LeanTween.moveLocalY(wallObject, wallHeight,appearTime);
         emitter.Play();
         Invoke("StopAppearing", appearTime);
     }
@@ -23,29 +25,19 @@ public class EmergingWall : MonoBehaviour
     {
         particles.Stop();
         emitter.Stop();
-        Invoke("Disappear",3);
     }
 
     public void Disappear() 
     {
         particles.Play();
-        LeanTween.moveLocalY(gameObject, -wallHeight, disappearTime).setOnComplete(Disable);
+        LeanTween.moveLocalY(wallObject, -wallHeight, disappearTime).setOnComplete(Disable);
         emitter.Play();
-        Invoke("StopAppearing", disappearTime);
+        Invoke("Disable", disappearTime);
     }
 
-    private void Disable()
+    public void Disable()
     {
         emitter.Stop();
-        gameObject.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
-        Appear();
-    }
-
-    private void OnDisable()
-    {
+        wallObject.SetActive(false);
     }
 }

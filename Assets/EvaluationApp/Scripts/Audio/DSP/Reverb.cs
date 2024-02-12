@@ -14,14 +14,16 @@ public class Reverb : MonoBehaviour
     [Range(0, 1)] public float feedbackCutoff = 0.5f;
 
     [Range(0, 50)] public float diffDelaysMin = 20, diffDelaysMax=40;
-    [Range(0, 1000)] public float revDelaysMin = 200, revDelaysMax = 500;
+    [Range(0, 1000)] public float revDelaysMin = 12, revDelaysMax = 234;
 
-    [Range(0,1)] public float diffuserOutputCutoff = 1;
+    [Range(0,1)] public float diffuserOutputCutoff = 0.9f;
 
-    [Range(0, 4)] public int numDiffusionStages = 4;
+    [Range(0, 4)] public int numDiffusionStages = 1;
 
     public bool enableDiffusion = true;
     public bool enableReverb = true;
+
+    DynamicDelay del = new DynamicDelay(44100,44100);
 
     private void Update()
     {
@@ -44,6 +46,7 @@ public class Reverb : MonoBehaviour
     private void OnAudioFilterRead(float[] data, int channels)
     {
         reverb.Process(data);
+        //del.ProcessBlock(data,2);
     }
 
 }
@@ -237,7 +240,7 @@ public class DelayNetwork
 
     private float[,] buffer;
     private int bufferSize;
-    private int writePointer;
+    private int[] writePointers;
     private float[] readPointers;
 
     float[] outputBuffer;
@@ -253,6 +256,7 @@ public class DelayNetwork
 
 
 
+
     public DelayNetwork(int numChannels, int maxDelays)
     {
         this.numChannels = numChannels;
@@ -264,6 +268,7 @@ public class DelayNetwork
         this.buffer = new float[numChannels,maxDelays];
 
         this.readPointers = new float[numChannels];
+        this.writePointers = new int[numChannels];
         outputBuffer = new float[numChannels];
         output = new float[numChannels];
         feedbackBuffer = new float[numChannels];
@@ -320,31 +325,28 @@ public class DelayNetwork
         {
             smoothedDelays[i] = delaySmoothing * smoothedDelays[i] + (1 - delaySmoothing) * delays[i];
 
-            readPointers[i] = writePointer - smoothedDelays[i];
-            while (readPointers[i] < 0) readPointers[i] += bufferSize;
+            readPointers[i] = writePointers[i]-1;
+            if (readPointers[i] < 0) readPointers[i] += (int)smoothedDelays[i];
 
             output[i] = buffer[i, (int)readPointers[i]];
-
-            buffer[i, writePointer] = lowpasses[i].Process(outputBuffer[i]) * feedbacks[i] + input[i];
-
-            input[i] = (input[i]+output[i])*0.5f;
         }
 
-        /*
-        outputBuffer[0] = buffer[0, (int)readPointers[0]] + buffer[5, (int)readPointers[5]] - buffer[3, (int)readPointers[3]] + buffer[6, (int)readPointers[6]];
-        outputBuffer[1] = buffer[4, (int)readPointers[4]] + buffer[2, (int)readPointers[2]] - buffer[7, (int)readPointers[7]] + buffer[0, (int)readPointers[0]];
-        outputBuffer[2] = buffer[2, (int)readPointers[2]] + buffer[6, (int)readPointers[7]] - buffer[4, (int)readPointers[4]] + buffer[5, (int)readPointers[5]];
-        outputBuffer[3] = buffer[6, (int)readPointers[6]] + buffer[3, (int)readPointers[3]] - buffer[5, (int)readPointers[5]] + buffer[1, (int)readPointers[1]];
-        outputBuffer[4] = buffer[2, (int)readPointers[2]] + buffer[6, (int)readPointers[6]] - buffer[1, (int)readPointers[1]] + buffer[4, (int)readPointers[4]];
-        outputBuffer[5] = buffer[1, (int)readPointers[1]] + buffer[4, (int)readPointers[4]] - buffer[0, (int)readPointers[0]] + buffer[5, (int)readPointers[5]];
-        outputBuffer[6] = buffer[5, (int)readPointers[5]] + buffer[7, (int)readPointers[7]] - buffer[2, (int)readPointers[2]] + buffer[0, (int)readPointers[0]];
-        outputBuffer[7] = buffer[7, (int)readPointers[7]] + buffer[4, (int)readPointers[4]] - buffer[5, (int)readPointers[5]] + buffer[2, (int)readPointers[2]];
-        */
+        float mult = 1 / (Mathf.Sqrt(2));
+        
+        outputBuffer[0] = (output[0] + output[1] + output[2] + output[3] + output[4] + output[5] + output[6] + output[7]) *mult;
+        outputBuffer[1] = (output[0] - output[1] + output[2] - output[3] + output[4] - output[5] + output[6] - output[7]) * mult;
+        outputBuffer[2] = (output[0] + output[1] - output[2] - output[3] + output[4] + output[5] - output[6] - output[7]) * mult;
+        outputBuffer[3] = (output[0] - output[1] - output[2] + output[3] + output[4] - output[5] - output[6] + output[7]) * mult;
+        outputBuffer[4] = (output[0] + output[1] + output[2] + output[3] - output[4] - output[5] - output[6] - output[7]) * mult;
+        outputBuffer[5] = (output[0] - output[1] + output[2] - output[3] - output[4] + output[5] - output[6] + output[7]) * mult;
+        outputBuffer[6] = (output[0] + output[1] - output[2] - output[3] - output[4] - output[5] + output[6] + output[7]) * mult;
+        outputBuffer[7] = (output[0] - output[1] - output[2] + output[3] - output[4] + output[5] + output[6] - output[7]) * mult;
 
+        /*
         float sum = 0;
         for (int i = 0; i < numChannels; i++)
         {
-            sum += buffer[i, (int)readPointers[i]];
+            sum += output[i];
         }
         sum *= 2f / numChannels;
 
@@ -352,9 +354,21 @@ public class DelayNetwork
         {
             outputBuffer[i] = sum;
         }
+        */
 
-        writePointer++;
-        if (writePointer >= bufferSize) writePointer -= bufferSize;
+        for (int i = 0; i < numChannels; i++)
+        {
+            buffer[i, writePointers[i]] *= feedbacks[i];
+            buffer[i, (int)readPointers[i]] = lowpasses[i].Process(outputBuffer[i]) * feedbacks[i] + input[i];
+
+            writePointers[i]++;
+            if (writePointers[i] >= (int)smoothedDelays[i]) writePointers[i] -= (int)smoothedDelays[i];
+            if(writePointers[i] < 0) writePointers[i] += (int)smoothedDelays[i];
+
+            
+
+            input[i] = (input[i] + output[i]) * 0.5f;
+        }
 
 
     }
@@ -405,7 +419,7 @@ public class Diffuser
         for(int i=0; i<numChannels; i++)
         {
             outputLowpasses[i] = new BiquadSingleChannel();
-            outputLowpasses[i].SetCoeffs(coeffs);
+            outputLowpasses[i].SetCoefficients(coeffs);
         }
     }
 
@@ -422,7 +436,7 @@ public class Diffuser
         float[] coeffs = BiquadCalculator.CalculateCoefficients(BiquadType.Lowpass, fc, 0.7f, 0);
         for (int i = 0; i < numChannels; i++)
         {
-            outputLowpasses[i].SetCoeffs(coeffs);
+            outputLowpasses[i].SetCoefficients(coeffs);
         }
         Debug.Log(coeffs[0]+", "+ coeffs[1] + ", " + coeffs[2] + ", " + coeffs[3] + ", " + coeffs[4]);
     }
@@ -509,7 +523,7 @@ public class DiffusionStep
             readPointer[j] = writePointer - smoothedDelays[j];
             while ((int)readPointer[j] < 0) readPointer[j] += bufferSize;
 
-            outputBuffer[j] = buffer[j,(int)readPointer[j]];
+            inputBuffer[j] = buffer[j,(int)readPointer[j]];
         }
 
         
@@ -534,7 +548,7 @@ public class DiffusionStep
 
         for(int i=0; i < numChannels; i++)
         {
-            inputBuffer[i] = outputBuffer[i];
+            inputBuffer[i] = inputBuffer[i]*0.5f+outputBuffer[i]*0.5f;
         }
 
     }

@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8720356432338970892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/WallEmerging1
+  m_EditorClassIdentifier: 
+  Path: event:/Events/WallEmerging1
+  Guid:
+    Data1: -1823102856
+    Data2: 1162181661
+    Data3: -1241919053
+    Data4: 272193818
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6086
 --- !u!114 &-7957493677137582432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +186,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &-5093259042119397847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/SpookyAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/SpookyAmbience
+  Guid:
+    Data1: 435448345
+    Data2: 1150268983
+    Data3: 1321315519
+    Data4: 1846679769
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 45847
 --- !u!114 &-5020832022624024911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,11 +340,38 @@ MonoBehaviour:
   - {fileID: 3001012958590905968}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4076
+  Length: 2400
+--- !u!114 &-4057827145237399366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Boing
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Boing
+  Guid:
+    Data1: 2095228559
+    Data2: 1272001407
+    Data3: -397083228
+    Data4: 336271096
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1776
 --- !u!114 &-3768666669744667036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,12 +468,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638416999439318596
+  lastModified: 638432938843902038
   FileSizes:
   - Name: Desktop
-    Value: 2740
+    Value: 3108
   - Name: Mobile
-    Value: 2740
+    Value: 3108
   Exists: 1
 --- !u!114 &-2102196907736683965
 MonoBehaviour:
@@ -448,6 +529,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &-1495652813049876612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Heartbeat
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Heartbeat
+  Guid:
+    Data1: 2024550598
+    Data2: 1251408137
+    Data3: -1086846788
+    Data4: -353950031
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15046
 --- !u!114 &-1196017480169648339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +610,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 154488
+--- !u!114 &-694427553983368265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Cues/HorrorCue1
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Cues/HorrorCue1
+  Guid:
+    Data1: -1504388884
+    Data2: 1156976894
+    Data3: 1573591706
+    Data4: 222368193
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-398696042177594502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,14 +747,49 @@ MonoBehaviour:
   - {fileID: 6173553661710098283}
   - {fileID: 2776322085912245409}
   - {fileID: 2659625167712232694}
+  - {fileID: -5093259042119397847}
+  - {fileID: 3287419079392527560}
+  - {fileID: -694427553983368265}
+  - {fileID: 8407203506886428913}
+  - {fileID: -4057827145237399366}
+  - {fileID: -1495652813049876612}
+  - {fileID: 1227436160112143733}
+  - {fileID: -8720356432338970892}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638416999439318596
+  cacheTime: 638432938843902038
   cacheVersion: 131609
+--- !u!114 &1227436160112143733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/WallEmerging1 2
+  m_EditorClassIdentifier: 
+  Path: event:/Events/WallEmerging1 2
+  Guid:
+    Data1: -1622896358
+    Data2: 1105224343
+    Data3: -2048237406
+    Data4: 2000457021
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6086
 --- !u!114 &1293834194866312430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,7 +839,7 @@ MonoBehaviour:
   - {fileID: 3001012958590905968}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -797,13 +967,40 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638416999439278737
+  lastModified: 638432938843852159
   FileSizes:
   - Name: Desktop
-    Value: 2584192
+    Value: 4813568
   - Name: Mobile
-    Value: 6185152
+    Value: 11081984
   Exists: 1
+--- !u!114 &3287419079392527560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Whispering
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Whispering
+  Guid:
+    Data1: 1890694787
+    Data2: 1264495724
+    Data3: -501554759
+    Data4: 1392213668
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22224
 --- !u!114 &3491255142867715852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1379,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2481
+--- !u!114 &8407203506886428913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Plop
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Plop
+  Guid:
+    Data1: -2019404170
+    Data2: 1111692533
+    Data3: -357931866
+    Data4: -1339730678
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &9094421266942062038
 MonoBehaviour:
   m_ObjectHideFlags: 0

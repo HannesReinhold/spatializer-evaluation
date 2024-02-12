@@ -6,6 +6,9 @@ public class MainIntroductionManager : MonoBehaviour
 {
     public List<GameObject> eventList;
     private int currentEvent;
+    public int startEvent;
+    public bool hideWindowsOnStart = false;
+    public bool eventOnStart = false;
 
     public PopupWindow additionalInfoWindow;
 
@@ -18,6 +21,19 @@ public class MainIntroductionManager : MonoBehaviour
         additionalInfoWindow.gameObject.SetActive(false);
 
         GUIAudioManager.SetAmbientVolume(0.3f);
+
+        if (hideWindowsOnStart)
+        {
+            Invoke("HideAllWindows",0.3f);
+        }
+
+        if(eventOnStart) StartEvent(startEvent);
+    }
+
+    private void HideAllWindows()
+    {
+        SetAdditionalInfoWindow(false);
+        SetMainWindow(false);
     }
 
     public void StartSubjectiveEvaluation()

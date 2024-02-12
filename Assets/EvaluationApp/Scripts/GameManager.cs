@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject subjectiveObject;
     public GameObject directionGuessingObject;
 
+    public GameObject roomModel;
+
 
     public enum EvaluationState
     {
@@ -106,6 +108,7 @@ public class GameManager : MonoBehaviour
     public void StartNewSession()
     {
         dataManager.InitializeSession();
+        //HideRoomModel(0);
 
 
         switch(evaluationState)
@@ -155,5 +158,23 @@ public class GameManager : MonoBehaviour
     public void SaveData()
     {
         dataManager.SaveSession();
+    }
+
+    public void ShowRoomModel(float time)
+    {
+        foreach (MeshRenderer r in roomModel.GetComponentsInChildren<Renderer>())
+        {
+            LeanTween.alpha(r.gameObject, 1, time);
+        }
+    }
+
+    public void HideRoomModel(float time)
+    {
+        foreach (MeshRenderer r in roomModel.GetComponentsInChildren<Renderer>())
+        {
+            LeanTween.alpha(r.gameObject, 0, time);
+            Debug.Log("Set Alpha");
+        }
+       
     }
 }

@@ -135,7 +135,7 @@ public class BiquadSingleChannel
 
     float z1=0, z2=0;
 
-    public void SetCoeffs(float[] coeffs)
+    public void SetCoefficients(float[] coeffs)
     {
         a0 = coeffs[0];
         a1 = coeffs[1];
