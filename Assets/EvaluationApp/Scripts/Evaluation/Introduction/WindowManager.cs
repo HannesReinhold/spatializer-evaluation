@@ -12,7 +12,6 @@ public class WindowManager : MonoBehaviour
 
     private void Awake()
     {
-        Reset();
     }
 
     private void Update()
@@ -28,19 +27,32 @@ public class WindowManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void OnEnable()
     {
-        OpenPage(startWindowIndex);
+        ResetValues();
+        currentWindowIndex = startWindowIndex;
+
+        currentWindow = windows[currentWindowIndex];
+        currentWindow.SetActive(true);
+        //currentWindow.GetComponent<PopupWindow>().Open();
+
         GUIAudioManager.PlayMenuOpen(transform.position);
     }
 
-    public void Reset()
+    public void ResetValues()
     {
         foreach (GameObject window in windows)
         {
             window.SetActive(false);
         }
     }
+
+    public void ResetSlow()
+    {
+        if (currentWindow != null) currentWindow.GetComponent<PopupWindow>().Close();
+        currentWindowIndex = startWindowIndex;
+        currentWindow = windows[currentWindowIndex];
+}
 
     public void NextPage()
     {
@@ -65,6 +77,17 @@ public class WindowManager : MonoBehaviour
         currentWindow = windows[pageIndex];
         currentWindow.SetActive(true);
         GUIAudioManager.PlayMenuOpen(transform.position);
+        Debug.Log("Open Menu"+currentWindow);
 
+    }
+
+    public void CloseCurrentWindow()
+    {
+        currentWindow.GetComponent<PopupWindow>().Close();
+    }
+
+    public void OpenCurrentWindow()
+    {
+        currentWindow.GetComponent<PopupWindow>().Open();
     }
 }

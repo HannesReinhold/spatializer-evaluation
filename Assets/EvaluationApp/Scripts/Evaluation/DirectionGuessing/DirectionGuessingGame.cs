@@ -113,8 +113,10 @@ public class DirectionGuessingGame : MonoBehaviour
     public void OnFinishClick()
     {
         GameManager.Instance.SaveData();
+        GameManager.Instance.StartComplete();
         FinishGame();
         finishWindow.Close();
+        GUIAudioManager.SetAmbientVolume(0.5f);
     }
 
     /// <summary>
@@ -137,7 +139,7 @@ public class DirectionGuessingGame : MonoBehaviour
     private void StartRound()
     {
         RoundData roundData = gameData.rounds[currentRound];
-        Vector3 respawnPosition = gameData.positions[currentRound];
+        Vector3 respawnPosition = gameData.positions[roundData.positionID];
         int spatializerID = roundData.spatializerID;
         currentPositionID = roundData.positionID;
 

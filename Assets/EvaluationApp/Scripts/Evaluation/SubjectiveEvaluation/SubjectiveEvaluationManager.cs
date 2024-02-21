@@ -12,6 +12,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     public GameObject finish;
 
     public SubjectiveEvaluationRound roundManager;
+    public WindowManager windowManager;
     //public SubjectiveEvaluationInterface1 subjectiveEvalInterface;
 
     public List<GameObject> speakers = new List<GameObject>();
@@ -27,12 +28,19 @@ public class SubjectiveEvaluationManager : MonoBehaviour
 
     private int currentEmergingSpeaker = 0;
 
-    private void Start()
+    public float speakerStartHeight = -4.66f;
+
+    private void OnEnable()
     {
         bus = FMODUnity.RuntimeManager.GetBus("bus:/Ambience");
         HideAll();
         StartEvalution();
         
+    }
+
+    private void OnDisable()
+    {
+        ResetValues();
     }
 
 
@@ -46,6 +54,9 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     
     public void StartEvalution()
     {
+        finish.SetActive(false);
+        evaluationRound.SetActive(false);
+
         numParts = GameManager.Instance.dataManager.spatializerData.subjectiveEvaluationData.evaluationParts.Count;
         if (!skipTutorial) introduction.SetActive(true);
         else { 
@@ -61,7 +72,8 @@ public class SubjectiveEvaluationManager : MonoBehaviour
     {
         evaluationRound.SetActive(false);
         finish.SetActive(true);
-        GUIAudioManager.SetAmbientVolume(0.1f);
+        GUIAudioManager.SetAmbientVolume(0.5f);
+        windowManager.ResetSlow();
     }
 
     public void StartRound()
@@ -137,4 +149,33 @@ public class SubjectiveEvaluationManager : MonoBehaviour
         currentEmergingSpeaker++;
     }
 
+
+
+    public void ResetValues()
+    {
+        currentEmergingSpeaker = 0;
+        for (int i = 0; i < speakers.Count; i++)
+        {
+            LeanTween.moveY(speakers[i], 0, speakerStartHeight).setEaseOutCubic();
+            speakers[i].GetComponentInChildren<Hint>().CloseHint();
+        }
+
+        tutorial.SetActive(false);
+        introduction.SetActive(false);
+
+        roundID = 0;
+        partID = 0;
+    }
+
+    public void CompleteEvaluation()
+    {
+        finish.SetActive(false);
+        ResetValues();
+        Invoke("StartDirectionGuessing",2);
+    }
+
+    private void StartDirectionGuessing()
+    {
+        GameManager.Instance.StartDirectionGuessing();
+    }
 }

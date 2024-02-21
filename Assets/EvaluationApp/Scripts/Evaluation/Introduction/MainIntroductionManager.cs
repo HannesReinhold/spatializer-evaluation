@@ -15,12 +15,12 @@ public class MainIntroductionManager : MonoBehaviour
     public WindowManager windowManager;
 
 
-    private void Start()
+    private void OnEnable()
     {
         ResetEvents();
         additionalInfoWindow.gameObject.SetActive(false);
 
-        GUIAudioManager.SetAmbientVolume(0.3f);
+        GUIAudioManager.SetAmbientVolume(0.5f);
 
         if (hideWindowsOnStart)
         {

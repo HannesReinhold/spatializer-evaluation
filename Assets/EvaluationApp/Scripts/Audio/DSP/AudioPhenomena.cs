@@ -30,7 +30,8 @@ public class AudioPhenomena : MonoBehaviour
 
 
 
-
+    public bool enableMono;
+    public bool enableStereo;
     public bool enableITD;
     public bool enableIID;
     public bool enableAttenuation;
@@ -40,6 +41,8 @@ public class AudioPhenomena : MonoBehaviour
 
     public Transform trans;
 
+
+    private AudioSource source; 
 
 
     private VariableDelay itdDelayLeft = new VariableDelay(1000);
@@ -92,11 +95,20 @@ public class AudioPhenomena : MonoBehaviour
     public bool enableDiffusion = true;
 
 
+    private float currentVolume = 0;
+    private float targetVolume = 1;
+
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (trans == null) trans = Camera.main.transform;
     }
 
     // Update is called once per frame
@@ -186,7 +198,7 @@ public class AudioPhenomena : MonoBehaviour
             playParticles = false;
         }
 
-        speakerModel.localScale = Vector3.one*0.1f+Vector3.one*rms*0.05f;
+        speakerModel.localScale = Vector3.one+Vector3.one*rms*0.2f;
         light.intensity = rms * 1;
     }
 
@@ -303,7 +315,7 @@ public class AudioPhenomena : MonoBehaviour
 
     private float calculateAirAttenuation(float distance)
     {
-        float att = DbToLin(loudnessDb - 70) / Mathf.Pow(distance + 1, 1.5f);
+        float att = DbToLin(loudnessDb - 70) / Mathf.Pow(distance + 1, 1.1f);
 
         return att;
     }
@@ -330,8 +342,26 @@ public class AudioPhenomena : MonoBehaviour
 
 
 
+
         for (int i = 0; i < data.Length; i += channels)
         {
+
+            currentVolume = 0.99997f * currentVolume + 0.00003f * targetVolume;
+
+            float monoValue = (data[i] + data[i + 1]) * 0.5f;
+
+            if (enableMono)
+            {
+                data[i] = monoValue * currentVolume;
+                data[i + 1] = monoValue * currentVolume;
+            }
+
+            if (enableStereo)
+            {
+                data[i] = data[i] * currentVolume;
+                data[i + 1] = data[i + 1] * currentVolume;
+            }
+
             // ITD
             if (enableITD)
             {
@@ -380,14 +410,37 @@ public class AudioPhenomena : MonoBehaviour
 
     }
 
+    public void EnableMono()
+    {
+        enableMono = true;
+    }
+
+    public void EnableStereo()
+    {
+        enableMono = false;
+        enableStereo = true;
+    }
+
     public void EnableITD()
     {
+        enableStereo = false;
+        enableMono = true;
         enableITD = true;
+        earDelayDifference = 5;
     }
 
     public void EnableIID()
     {
         enableIID = true;
+        earDelayDifference = 1;
+    }
+
+    public void EnableHRTF()
+    {
+        enableMono = false;
+        enableStereo = true;
+        enableIID = false;
+        source.spatialize = true;
     }
 
     public void EnableAttenuation()
@@ -409,4 +462,16 @@ public class AudioPhenomena : MonoBehaviour
     {
         enableReverb = true;
     }
+
+    public void Mute()
+    {
+        targetVolume = 0;
+        Invoke("Disable",2);
+    }
+
+    private void Disable()
+    {
+        gameObject.SetActive(false);   
+    }
+
 }

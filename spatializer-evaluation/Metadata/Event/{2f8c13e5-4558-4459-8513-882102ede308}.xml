@@ -114,7 +114,6 @@
 		<relationship name="effects">
 			<destination>{03ec0474-9646-4025-aefd-c5183a247d8a}</destination>
 			<destination>{ce8e7237-65da-40b6-8da2-2612e59f5dab}</destination>
-			<destination>{4f46ae84-57a7-41de-9659-bf5048c48760}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{245cf5b0-6ec4-46c7-a05e-9d1fd64f47f7}" />
@@ -129,11 +128,6 @@
 	<object class="PluginEffect" id="{ce8e7237-65da-40b6-8da2-2612e59f5dab}">
 		<relationship name="plugin">
 			<destination>{b14dda47-36a6-4d1c-af5d-b1dda219a6e2}</destination>
-		</relationship>
-	</object>
-	<object class="PluginEffect" id="{4f46ae84-57a7-41de-9659-bf5048c48760}">
-		<relationship name="plugin">
-			<destination>{db7a86d7-71da-4534-99aa-3b7730cdb129}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{80349c05-e4f4-49ae-b3f1-b93d9337db84}" />
@@ -154,15 +148,6 @@
 			<destination>{a278a911-c4a3-4e38-b175-cbbccb84a9b0}</destination>
 			<destination>{176ff8d7-cf77-4c1c-a9b0-66f81bdf36e1}</destination>
 			<destination>{610cb96c-8a71-47b3-9d09-e714c6c46cae}</destination>
-		</relationship>
-	</object>
-	<object class="Plugin" id="{db7a86d7-71da-4534-99aa-3b7730cdb129}">
-		<property name="identifier">
-			<value>Resonance Audio Listener</value>
-		</property>
-		<relationship name="pluginParameters">
-			<destination>{3e61ac52-8e24-41fb-ab00-2c7b895e81b0}</destination>
-			<destination>{388202a1-2ff5-489e-9739-e58bd0d67451}</destination>
 		</relationship>
 	</object>
 	<object class="FloatPluginParameter" id="{284a5bc0-eaf9-4f72-851f-e996fd1b9a5e}">
@@ -238,7 +223,6 @@
 		<property name="name">
 			<value>Attenuation Ran</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -247,7 +231,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -283,29 +266,8 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
-		</property>
-	</object>
-	<object class="FloatPluginParameter" id="{3e61ac52-8e24-41fb-ab00-2c7b895e81b0}">
-		<property name="name">
-			<value>Gain</value>
-		</property>
-		<property name="value">
-			<value>-9.99999975e-06</value>
-		</property>
-		<property name="curve">
-			<value>{(0.000000,-80.000000)(1.000000,0.000000)}</value>
-		</property>
-	</object>
-	<object class="DataPluginParameter" id="{388202a1-2ff5-489e-9739-e58bd0d67451}">
-		<property name="name">
-			<value>Room Properties</value>
-		</property>
-		<property name="value" />
-		<property name="dataType">
-			<value>0</value>
 		</property>
 	</object>
 </objects>

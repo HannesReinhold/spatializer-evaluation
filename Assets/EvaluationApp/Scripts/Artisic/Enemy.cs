@@ -27,11 +27,14 @@ public class Enemy : MonoBehaviour
 
     public bool inactive = false;
 
+    private Vector3 StartPosition;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         cameraTransform = Camera.main.transform;
+        StartPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -106,6 +109,18 @@ public class Enemy : MonoBehaviour
         alreadyStriked = false;
     }
 
+    public void ResetValues()
+    {
+        meshRendererHelmet.enabled = true;
+        meshRendererBody.enabled = true;
+        meshRendererSword.enabled = true;
+        emitter.enabled = true;
+        //animator.StartPlayback();
+        inactive = false;
+        transform.position = StartPosition;
+        alreadyStriked = false;
+    }
+
     public void Defeat()
     {
         particles.Play();
@@ -113,7 +128,7 @@ public class Enemy : MonoBehaviour
         meshRendererBody.enabled = false;
         meshRendererSword.enabled = false;
         emitter.enabled = false;
-        animator.StopPlayback();
+        //animator.StopPlayback();
         inactive = true;
     }
 
@@ -124,12 +139,17 @@ public class Enemy : MonoBehaviour
         {
             Defeat();
             exampleRef.OnKill();
-            Invoke("Destroy",1);
+            Invoke("Destroy",2);
         }
     }
 
     private void Destroy()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        ResetValues();
     }
 }

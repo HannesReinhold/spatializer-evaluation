@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OcclusionEvent : MonoBehaviour
 {
+    public MainIntroductionManager mainIntroductionManager;
+
     public EmergingWall wall1;
     public EmergingWall wall2;
 
@@ -27,8 +29,8 @@ public class OcclusionEvent : MonoBehaviour
         wall1.Disable();
         wall2.Disable();
 
-        Invoke("ShowWall1",2);
-        Invoke("ShowWall2", 4);
+        Invoke("ShowWall1",0.5f);
+        Invoke("ShowWall2", 1.5f);
 
         audioPhenomena.EnableOcclusion();
     }
@@ -42,6 +44,7 @@ public class OcclusionEvent : MonoBehaviour
     {
         HideWall1();
         HideWall2();
+        Invoke("Disable",3);
     }
 
     private void ShowWall1()
@@ -62,6 +65,11 @@ public class OcclusionEvent : MonoBehaviour
     private void HideWall2()
     {
         wall2.Disappear();
+    }
+
+    private void Disable()
+    {
+        mainIntroductionManager.StartEvent(8);
     }
 }
 

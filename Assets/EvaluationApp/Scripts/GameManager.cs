@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     //public GameObject SubjectiveEvaluationPrefab;
     //public GameObject DirectionGuessingPrefab;
 
+    private int sessionID = 0;
+
     public bool IsVR = true;
     public bool allowEvaluationNonVR = false;
 
@@ -16,8 +19,11 @@ public class GameManager : MonoBehaviour
     public GameObject introductionObject;
     public GameObject subjectiveObject;
     public GameObject directionGuessingObject;
+    public GameObject completeObject;
 
     public GameObject roomModel;
+
+
 
 
     public enum EvaluationState
@@ -28,7 +34,8 @@ public class GameManager : MonoBehaviour
         Complete
     }
 
-    public EvaluationState evaluationState = 0;
+    public EvaluationState startEvaluationState = 0;
+    private EvaluationState evaluationState = 0;
 
     public List<GameObject> VRStuff;
     public List<GameObject> NonVRStuff;
@@ -75,14 +82,13 @@ public class GameManager : MonoBehaviour
             }
 
             if (allowEvaluationNonVR) VRStuff[VRStuff.Count - 1].SetActive(true);
-            
 
 
 
 
             StartNewSession();
         }
-        InitializeGame();
+        
 
     }
 
@@ -107,8 +113,21 @@ public class GameManager : MonoBehaviour
 
     public void StartNewSession()
     {
+        if (sessionID != 0)
+        {
+            //introductionObject = GameObject.Find("Introduction Menu Final");
+            //subjectiveObject = GameObject.Find("Subjective Evaluaion 1");
+            //directionGuessingObject = GameObject.Find("Direction Guessing Game");
+            //introductionObject = GameObject.Find("Compete Menu");
+        }
+
+
+        
         dataManager.InitializeSession();
-        //HideRoomModel(0);
+        HideRoomModel(0);
+
+        if (sessionID == 0) evaluationState = startEvaluationState;
+        else evaluationState = EvaluationState.Introduction;
 
 
         switch(evaluationState)
@@ -119,9 +138,24 @@ public class GameManager : MonoBehaviour
                 StartSubjectiveEvaluation(); break;
             case EvaluationState.DirectionGuessing: 
                 StartDirectionGuessing(); break;
+            case EvaluationState.Complete:
+                StartComplete(); break;
             default: break;
         }
 
+        InitializeGame();
+        sessionID++;
+
+    }
+
+    public void Restart()
+    {
+        StartNewSession();
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartNewSession();
     }
 
     public void InitializeGame()
@@ -131,9 +165,11 @@ public class GameManager : MonoBehaviour
 
     public void StartIntroduction()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Intro", transform.position);
         introductionObject.SetActive(true);
         subjectiveObject.SetActive(false);
         directionGuessingObject.SetActive(false);
+        completeObject.SetActive(false);
     }
 
     public void StartSubjectiveEvaluation()
@@ -141,6 +177,7 @@ public class GameManager : MonoBehaviour
         introductionObject.SetActive(false);
         subjectiveObject.SetActive(true);
         directionGuessingObject.SetActive(false);
+        completeObject.SetActive(false);
     }
 
     public void StartDirectionGuessing()
@@ -148,6 +185,15 @@ public class GameManager : MonoBehaviour
         introductionObject.SetActive(false);
         subjectiveObject.SetActive(false);
         directionGuessingObject.SetActive(true);
+        completeObject.SetActive(false);
+    }
+
+    public void StartComplete()
+    {
+        introductionObject.SetActive(false);
+        subjectiveObject.SetActive(false);
+        directionGuessingObject.SetActive(false);
+        completeObject.SetActive(true);
     }
 
     public void FinishSession()

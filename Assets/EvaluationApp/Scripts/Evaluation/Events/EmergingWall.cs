@@ -8,8 +8,8 @@ public class EmergingWall : MonoBehaviour
     public FMODUnity.StudioEventEmitter emitter;
     public GameObject wallObject;
 
-    public float appearTime = 5;
-    public float disappearTime = 5;
+    public float appearTime = 3;
+    public float disappearTime = 3;
     public float wallHeight = 2;
 
     public void Appear()

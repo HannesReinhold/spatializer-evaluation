@@ -43,35 +43,41 @@ public class InterfaceTutorial : MonoBehaviour
 
     private void Open1()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cues/Hint2", hints[0].transform.position);
         hints[0].OpenHint();
     }
 
     private void Open2()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cues/Hint2", hints[1].transform.position);
         hints[1].OpenHint();
         hints[0].HideHint();
     }
 
     private void Open3()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cues/Hint2", hints[2].transform.position);
         hints[2].OpenHint();
         hints[1].HideHint();
     }
 
     private void Open4()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cues/Hint2", hints[3].transform.position);
         hints[3].OpenHint();
         hints[2].HideHint();
     }
 
     private void Open5()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cues/Hint2", hints[4].transform.position);
         hints[4].OpenHint();
         hints[3].HideHint();
     }
 
     private void Open6()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cues/Hint2", hints[5].transform.position);
         hints[5].OpenHint();
         hints[4].HideHint();
     }

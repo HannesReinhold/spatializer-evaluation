@@ -54,6 +54,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4989
+--- !u!114 &-7934894160641777319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSound1
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSound1
+  Guid:
+    Data1: 950760044
+    Data2: 1262755933
+    Data3: -1698417474
+    Data4: 893034651
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-7903036607872629586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSneaking3
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSneaking3
+  Guid:
+    Data1: 789389632
+    Data2: 1311666447
+    Data3: -819978605
+    Data4: -929026337
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 460
 --- !u!114 &-7816188385489512328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +240,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1202
+--- !u!114 &-5925236229630718885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterNoises
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterNoises
+  Guid:
+    Data1: 707858829
+    Data2: 1245742990
+    Data3: -1790492503
+    Data4: 396124808
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32000
 --- !u!114 &-5093259042119397847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +426,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2400
+--- !u!114 &-4190533012291056051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSneaking4
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSneaking4
+  Guid:
+    Data1: 992347899
+    Data2: 1264692327
+    Data3: 1925670057
+    Data4: -216320535
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 240
 --- !u!114 &-4057827145237399366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +507,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 300
+--- !u!114 &-3212838768944808269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Music
+  Guid:
+    Data1: -1179015643
+    Data2: 1213800810
+    Data3: -1833897849
+    Data4: 1563968594
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59115
 --- !u!114 &-3191591876786134200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +588,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1906
+--- !u!114 &-2832705835046544057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSound4
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSound4
+  Guid:
+    Data1: 337318851
+    Data2: 1268201057
+    Data3: 849299874
+    Data4: 658251212
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 950
+--- !u!114 &-2583642052519654126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSneaking1
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSneaking1
+  Guid:
+    Data1: 1120008666
+    Data2: 1341001485
+    Data3: -1521426776
+    Data4: 1229875489
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 80
 --- !u!114 &-2529225735114066685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,13 +657,40 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638432938843902038
+  lastModified: 638440460769925540
   FileSizes:
   - Name: Desktop
-    Value: 3108
+    Value: 3838
   - Name: Mobile
-    Value: 3108
+    Value: 3838
   Exists: 1
+--- !u!114 &-2520039756221686632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/KnightTheme
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/KnightTheme
+  Guid:
+    Data1: -150917659
+    Data2: 1154225151
+    Data3: -1802286173
+    Data4: 912225026
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7058
 --- !u!114 &-2102196907736683965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +745,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &-1497267779345565228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSound5
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSound5
+  Guid:
+    Data1: 1356324897
+    Data2: 1269112996
+    Data3: -340453970
+    Data4: 41662005
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1600
 --- !u!114 &-1495652813049876612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +799,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 15046
+--- !u!114 &-1321989607936832700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Intro
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Intro
+  Guid:
+    Data1: 1473555917
+    Data2: 1177847211
+    Data3: -1918294342
+    Data4: -1515213090
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7418
 --- !u!114 &-1196017480169648339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +852,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 200
+  Length: 514
+--- !u!114 &-935153411937445870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Knight/KnightDefeat
+  m_EditorClassIdentifier: 
+  Path: event:/Knight/KnightDefeat
+  Guid:
+    Data1: -1745694952
+    Data2: 1082666985
+    Data3: 910227842
+    Data4: 1143988599
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2086
 --- !u!114 &-704697668483190234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,14 +1052,86 @@ MonoBehaviour:
   - {fileID: -1495652813049876612}
   - {fileID: 1227436160112143733}
   - {fileID: -8720356432338970892}
+  - {fileID: -935153411937445870}
+  - {fileID: 328694919742825514}
+  - {fileID: -1497267779345565228}
+  - {fileID: -7903036607872629586}
+  - {fileID: 4784670925863497929}
+  - {fileID: 5607361163412762316}
+  - {fileID: -7934894160641777319}
+  - {fileID: 7562271160815686514}
+  - {fileID: -2832705835046544057}
+  - {fileID: -2583642052519654126}
+  - {fileID: -4190533012291056051}
+  - {fileID: -5925236229630718885}
+  - {fileID: 2835795168981244029}
+  - {fileID: -3212838768944808269}
+  - {fileID: -2520039756221686632}
+  - {fileID: 7944691767988245403}
+  - {fileID: -1321989607936832700}
+  - {fileID: 540562695981409077}
   EditorParameters:
   - {fileID: -6743448808223742899}
   MasterBanks:
   - {fileID: 3001012958590905968}
   StringsBanks:
   - {fileID: -2529225735114066685}
-  cacheTime: 638432938843902038
+  cacheTime: 638440460769925540
   cacheVersion: 131609
+--- !u!114 &328694919742825514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/SpookyAmbience 2
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/SpookyAmbience 2
+  Guid:
+    Data1: -1069388191
+    Data2: 1121228664
+    Data3: -1676762991
+    Data4: 571242022
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 38347
+--- !u!114 &540562695981409077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cues/Hint2
+  m_EditorClassIdentifier: 
+  Path: event:/Cues/Hint2
+  Guid:
+    Data1: -956631073
+    Data2: 1116737759
+    Data3: 577966486
+    Data4: 695103976
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180
 --- !u!114 &1227436160112143733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,6 +1321,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2481
+--- !u!114 &2835795168981244029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Tension
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Tension
+  Guid:
+    Data1: 1573798225
+    Data2: 1240420236
+    Data3: -159627373
+    Data4: 2133537072
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10004
 --- !u!114 &3001012958590905968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,12 +1363,12 @@ MonoBehaviour:
   Path: spatializer-evaluation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638432938843852159
+  lastModified: 638440460769865701
   FileSizes:
   - Name: Desktop
-    Value: 4813568
+    Value: 6450464
   - Name: Mobile
-    Value: 11081984
+    Value: 15164640
   Exists: 1
 --- !u!114 &3287419079392527560
 MonoBehaviour:
@@ -1109,6 +1505,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 497
+--- !u!114 &4784670925863497929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSneaking2
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSneaking2
+  Guid:
+    Data1: 1489344080
+    Data2: 1301796032
+    Data3: -867830356
+    Data4: 292408173
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180
 --- !u!114 &4992244327266201271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,6 +1613,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1906
+--- !u!114 &5607361163412762316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSound2
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSound2
+  Guid:
+    Data1: 767737698
+    Data2: 1328886610
+    Data3: 2100054183
+    Data4: -1716294101
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2600
 --- !u!114 &6173553661710098283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,7 +1688,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3001012958590905968}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -1325,6 +1775,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &7562271160815686514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spooky/Monster/MonsterSound3
+  m_EditorClassIdentifier: 
+  Path: event:/Spooky/Monster/MonsterSound3
+  Guid:
+    Data1: -2017044369
+    Data2: 1144803780
+    Data3: 917731518
+    Data4: 1951612053
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &7742001163579238530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,6 +1829,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &7944691767988245403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Outro
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Outro
+  Guid:
+    Data1: -664439354
+    Data2: 1222250923
+    Data3: 1401831828
+    Data4: -768983275
+  Banks:
+  - {fileID: 3001012958590905968}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9273
 --- !u!114 &8292656627758043615
 MonoBehaviour:
   m_ObjectHideFlags: 0

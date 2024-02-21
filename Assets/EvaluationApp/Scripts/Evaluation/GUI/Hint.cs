@@ -16,19 +16,19 @@ public class Hint : MonoBehaviour
     {
         if(Open)LeanTween.scale(gameObject, Vector3.one * 1, 0).setEaseOutCubic();
         else LeanTween.scale(gameObject, Vector3.one * 0, 0).setEaseOutCubic();
-        audioSource.SetActive(Open);
+        if (audioSource != null) audioSource.SetActive(Open);
     }
 
     public void OpenHint()
     {
         LeanTween.scale(gameObject, Vector3.one * scaling, 0.5f).setEaseOutCubic();
-        audioSource.SetActive(true);
+        if(audioSource!=null) audioSource.SetActive(true);
     }
 
     public void CloseHint()
     {
         LeanTween.scale(gameObject, Vector3.one * 0, 0.5f).setEaseOutCubic();
-        audioSource.SetActive(false);
+        if (audioSource != null) audioSource.SetActive(false);
     }
 
     public void HideHint()

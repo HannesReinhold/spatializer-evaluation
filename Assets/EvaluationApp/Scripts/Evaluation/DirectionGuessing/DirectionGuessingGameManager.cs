@@ -14,9 +14,11 @@ public class DirectionGuessingGameManager : MonoBehaviour
 
     public List<GameObject> sciptedEvents;
 
+    public WindowManager windowManager;
+
     private void OnEnable()
     {
-        OpenIntroduction();
+        //OpenIntroduction();
         
     }
 
@@ -27,10 +29,9 @@ public class DirectionGuessingGameManager : MonoBehaviour
 
     private void ResetAll()
     {
-        introduction.SetActive(false);
-        tutorial.SetActive(false);
-        game.SetActive(false);
-        complete.SetActive(false);
+        //introduction.SetActive(false);
+        //tutorial.SetActive(false);
+        //game.SetActive(false);
     }
 
 
@@ -38,14 +39,14 @@ public class DirectionGuessingGameManager : MonoBehaviour
     public void OpenIntroduction()
     {
         ResetAll();
-        introduction.SetActive(true);
+        //introduction.SetActive(true);
         GUIAudioManager.SetAmbientVolume(0.5f);
     }
 
     public void OpenTutorial()
     {
         ResetAll();
-        tutorial.SetActive(true);
+        tutorialGame.SetActive(true);
     }
 
     public void OpenGame()
@@ -58,7 +59,13 @@ public class DirectionGuessingGameManager : MonoBehaviour
     public void OpenComplete()
     {
         ResetAll();
-        complete.SetActive(true);
+        windowManager.ResetSlow();
+        Invoke("STartComplete",2);
+    }
+
+    private void StartComplete()
+    {
+        GameManager.Instance.StartComplete();
     }
 
     public void ResetEvents()
@@ -90,5 +97,11 @@ public class DirectionGuessingGameManager : MonoBehaviour
     public void EndTutorialGame()
     {
         tutorialGame.SetActive(false);
+    }
+
+    public void OnCompleteClick()
+    {
+        windowManager.ResetSlow();
+        Invoke("StartComplete", 2);
     }
 }

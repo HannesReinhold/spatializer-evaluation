@@ -9,6 +9,8 @@ public class StrikeEnemy : MonoBehaviour
     public GameObject sword;
     public GameObject enemy;
 
+    public GameObject music;
+
 
 
     private float currentOpacity = 0;
@@ -38,7 +40,7 @@ public class StrikeEnemy : MonoBehaviour
         Invoke("EquipSword",3);
         rend.material.SetFloat("Opacity", 0.0f);
 
-        lastPosition = rightControllerTransform.position;
+        if(rightControllerTransform!=null) lastPosition = rightControllerTransform.position;
         source = sword.GetComponent<AudioSource>();
         source.clip = clip;
 
@@ -47,8 +49,14 @@ public class StrikeEnemy : MonoBehaviour
 
     private void OnEnable()
     {
+        
         completeWindow.gameObject.SetActive(false);
+        if (rightControllerTransform != null) lastPosition = rightControllerTransform.position;
         Invoke("EquipSword", 3);
+        rend.material.SetFloat("Opacity", 0.0f);
+        enemy.SetActive(true);
+        music.SetActive(true);
+        
     }
 
 
@@ -95,6 +103,7 @@ public class StrikeEnemy : MonoBehaviour
 
         laser = GameObject.Find("LaserPointer");
         if(laser!=null) laser.SetActive(false);
+        warningWindow.Close();
     }
 
     public void OpenComplete()
@@ -110,15 +119,18 @@ public class StrikeEnemy : MonoBehaviour
         sword.SetActive(false);
 
         Invoke("OpenComplete",0.5f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Knight/KnightDefeat", enemy.transform.position);
         FMODUnity.StudioEventEmitter audio = enemy.GetComponent<FMODUnity.StudioEventEmitter>();    
         audio.Stop();
+        music.SetActive(false);
     }
 
     private void StartNewEvent()
     {
 
-        //windowManager.NextPage();
-        introductionManager.StartEvent(2);
+        windowManager.NextPage();
+        windowManager.NextPage();
+        introductionManager.StartEvent(1);
     }
 
     public void OnCompleClick()

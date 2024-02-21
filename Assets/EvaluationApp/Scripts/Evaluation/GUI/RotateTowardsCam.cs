@@ -12,6 +12,8 @@ public class RotateTowardsCam : MonoBehaviour
 
     public bool enableXRot = false;
 
+    public bool invert;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class RotateTowardsCam : MonoBehaviour
     void Update()
     {
         Vector3 direction = (new Vector3(target.position.x,enableXRot ? target.position.y:0, target.position.z) - new Vector3(transform.position.x, enableXRot ? transform.position.y : 0, transform.position.z)).normalized;
+        if (invert) direction = -direction;
 
         //create the rotation we need to be in to look at the target
         Quaternion lookRotation = Quaternion.LookRotation(direction);
