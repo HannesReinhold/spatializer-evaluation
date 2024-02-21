@@ -25,6 +25,16 @@ public class InterfaceTutorial : MonoBehaviour
         Invoke("Open6", 30);
     }
 
+    public void FinishTutorial()
+    {
+        CancelInvoke("Open1");
+        CancelInvoke("Open2");
+        CancelInvoke("Open3");
+        CancelInvoke("Open4");
+        CancelInvoke("Open5");
+        CancelInvoke("Open6");
+    }
+
     private void OnEnable()
     {
 

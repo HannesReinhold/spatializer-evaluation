@@ -53,7 +53,7 @@ MonoBehaviour:
       Data4: -416339619
     Path: event:/Cues/Hint1
   Event: 
-  PlayEvent: 11
+  PlayEvent: 0
   StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rotationSpeed: 5
+  enableXRot: 0
+  invert: 0
 --- !u!114 &3878500773579413911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bd07efa661b4b4fb9b279b56514910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  canvas: {fileID: 4894390933431296714}
   Open: 0
+  audioSource: {fileID: 0}
+  scaling: 1000
 --- !u!1 &4990627793324788096
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +369,23 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1296520910755237041, guid: 7c507687fde4aa94ea2647db4ae6facb, type: 3}
   m_PrefabInstance: {fileID: 2841659783256821524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4401196699185034783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1908307502890678539, guid: 7c507687fde4aa94ea2647db4ae6facb, type: 3}
+  m_PrefabInstance: {fileID: 2841659783256821524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &4894390933431296714
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401196699185034783}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!224 &7107162713361302026 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5030006562291453214, guid: 7c507687fde4aa94ea2647db4ae6facb, type: 3}

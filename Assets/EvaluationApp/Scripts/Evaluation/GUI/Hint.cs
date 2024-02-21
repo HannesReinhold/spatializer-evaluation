@@ -22,13 +22,13 @@ public class Hint : MonoBehaviour
     public void OpenHint()
     {
         LeanTween.scale(gameObject, Vector3.one * scaling, 0.5f).setEaseOutCubic();
-        if(audioSource!=null) audioSource.SetActive(true);
+        if(audioSource!=null) audioSource.GetComponent<FMODUnity.StudioEventEmitter>().Play();
     }
 
     public void CloseHint()
     {
         LeanTween.scale(gameObject, Vector3.one * 0, 0.5f).setEaseOutCubic();
-        if (audioSource != null) audioSource.SetActive(false);
+        if (audioSource != null) audioSource.GetComponent<FMODUnity.StudioEventEmitter>().Stop();
     }
 
     public void HideHint()

@@ -156,7 +156,7 @@ public class SubjectiveEvaluationManager : MonoBehaviour
         currentEmergingSpeaker = 0;
         for (int i = 0; i < speakers.Count; i++)
         {
-            LeanTween.moveY(speakers[i], 0, speakerStartHeight).setEaseOutCubic();
+            LeanTween.moveY(speakers[i], speakerStartHeight,0).setEaseOutCubic();
             speakers[i].GetComponentInChildren<Hint>().CloseHint();
         }
 
