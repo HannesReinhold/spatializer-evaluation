@@ -102,13 +102,14 @@ public class AudioPhenomena : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        if (trans == null) trans = Camera.main.transform;
+        if (trans == null) trans = FindObjectOfType<FollowTarget>().transform;
     }
 
     // Update is called once per frame

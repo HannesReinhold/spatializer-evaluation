@@ -102,7 +102,9 @@ public class StrikeEnemy : MonoBehaviour
         equipped = true;
 
         laser = GameObject.Find("LaserPointer");
-        if(laser!=null) laser.SetActive(false);
+        if (laser != null) laser.GetComponent<LineRenderer>().widthMultiplier = 0;
+        GameObject controllerObject = GameObject.Find("MetaQuestTouchPro_Right");
+        controllerObject.SetActive(false);
         warningWindow.Close();
     }
 
@@ -116,13 +118,23 @@ public class StrikeEnemy : MonoBehaviour
     public void OnKill()
     {
         //laser.SetActive(true);
-        sword.SetActive(false);
+        
 
         Invoke("OpenComplete",0.5f);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Knight/KnightDefeat", enemy.transform.position);
         FMODUnity.StudioEventEmitter audio = enemy.GetComponent<FMODUnity.StudioEventEmitter>();    
         audio.Stop();
         music.SetActive(false);
+
+        Invoke("UnEquippSword",1);
+    }
+
+    private void UnEquippSword()
+    {
+        sword.SetActive(false);
+        if (laser != null) laser.GetComponent<LineRenderer>().widthMultiplier = 1;
+        GameObject controllerObject = GameObject.Find("MetaQuestTouchPro_Right");
+        controllerObject.SetActive(true);
     }
 
     private void StartNewEvent()
