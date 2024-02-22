@@ -1,0 +1,13 @@
+newDirection = (target.position - transform.position).normalized;
+
+        direction = direction.normalized;
+
+        Vector3 d = new Vector3(Vector3.Dot(newDirection,transform.right), Vector3.Dot(newDirection, transform.up), Vector3.Dot(newDirection, transform.forward));
+        float azimuth = Mathf.Atan2(d.x,d.z) / Mathf.PI;
+        Vector3 proj = new Vector3(d.x,0,d.z).normalized;
+        float elevation = Mathf.Acos(Vector3.Dot(d,proj)) / Mathf.PI;
+        if (d.z < 0) elevation = 1 - elevation;
+        if (d.x < 0 || d.y<0) elevation = -elevation;
+        
+
+        Debug.Log("Azimuth: "+azimuth+", Elevation: "+elevation);

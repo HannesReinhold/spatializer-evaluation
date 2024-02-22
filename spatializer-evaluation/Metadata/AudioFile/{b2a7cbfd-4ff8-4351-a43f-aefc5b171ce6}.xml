@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b2a7cbfd-4ff8-4351-a43f-aefc5b171ce6}">
+		<property name="assetPath">
+			<value>Knight/Sword/swing1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.4816326530612245</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0df577d9-5fd9-4530-a338-422ae9ff4af6}</destination>
+		</relationship>
+	</object>
+</objects>

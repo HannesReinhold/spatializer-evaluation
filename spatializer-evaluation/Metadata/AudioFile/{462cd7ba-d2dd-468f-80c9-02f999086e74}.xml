@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{462cd7ba-d2dd-468f-80c9-02f999086e74}">
+		<property name="assetPath">
+			<value>Spooky/Spooky_High.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>38.347755102040814</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0df577d9-5fd9-4530-a338-422ae9ff4af6}</destination>
+		</relationship>
+	</object>
+</objects>
